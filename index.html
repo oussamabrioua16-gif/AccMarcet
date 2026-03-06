@@ -457,10 +457,14 @@ footer{
         <div><strong>دفع عند الاستلام ✅</strong>توصيل ل69 ولاية في الجزائر </div>
       </div>
 
-      <button class="btn-submit" onclick="submitOrder()">✅ تأكيد الطلب — 11500 دج</button>
-      <button class="wa-btn" onclick="orderWhatsApp()">
-        <span style="font-size:20px">💬</span> اطلب عبر WhatsApp
-      </button>
+      <button class="btn-submit" 
+        onclick="fbq('track', 'Purchase'); submitOrder()">
+  ✅ تأكيد الطلب — 11500 دج
+</button>
+
+<button class="wa-btn" onclick="orderWhatsApp()">
+  <span style="font-size:20px">💬</span> اطلب عبر WhatsApp
+</button>
     </div>
 
     <div class="success" id="success">
