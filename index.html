@@ -599,6 +599,7 @@ function pickSize(el, s) {
 }
 
 <script>
+<script>
 function submitOrder() {
   const name = document.getElementById('name').value.trim();
   const phone = document.getElementById('phone').value.trim();
@@ -614,14 +615,17 @@ function submitOrder() {
   // سجل البيع في Pixel
   fbq('track','Purchase');
 
-  // إرسال الطلب إلى واتساب في الخلفية (يفتح في تبويب جديد حتى لا يراه العميل)
-  const msg = `🛒 طلب جديد - Nike TN%0A👤 الاسم: ${name}%0A📱 الهاتف: ${phone}%0A📍 الولاية: ${wilaya}%0A📏 المقاس: ${sz}%0A💰 السعر: 11500 دج%0A💳 الدفع عند الاستلام`;
-  window.open(`https://wa.me/${WA}?text=${msg}`, '_blank');
-
   // إخفاء النموذج وإظهار رسالة النجاح داخل الصفحة
   document.getElementById('formContent').style.display = 'none';
   document.getElementById('success').style.display = 'block';
+
+  // إرسال الطلب إلى واتساب في الخلفية بعد تأكيد ظهور الرسالة (1 ثانية تأخير)
+  setTimeout(function() {
+    const msg = `🛒 طلب جديد - Nike TN%0A👤 الاسم: ${name}%0A📱 الهاتف: ${phone}%0A📍 الولاية: ${wilaya}%0A📏 المقاس: ${sz}%0A💰 السعر: 11500 دج%0A💳 الدفع عند الاستلام`;
+    window.open(`https://wa.me/${WA}?text=${msg}`, '_blank');
+  }, 1000);
 }
+</script>
 </script>
 
 function orderWhatsApp() {
