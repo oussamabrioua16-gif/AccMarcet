@@ -604,24 +604,33 @@ function submitOrder() {
   const wilaya = document.getElementById('wilaya').value;
   const sz = document.getElementById('sz').value;
 
-  // التحقق من البيانات
   if (!name) { alert('أدخل اسمك الكامل'); return; }
   if (!phone || phone.length < 9) { alert('أدخل رقم هاتف صحيح'); return; }
   if (!wilaya) { alert('اختر ولايتك'); return; }
   if (!sz) { alert('اختر المقاس'); return; }
 
-  // سجل البيع في Pixel
+  // تسجيل شراء في Pixel
   fbq('track','Purchase');
 
-  // إخفاء النموذج وإظهار رسالة النجاح داخل الصفحة
+  // ارسال الطلب الى Make
+  fetch("https://hook.eu1.make.com/8e6csxrfwmb6dmb8fb59zxkviii79v5g", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      name: name,
+      phone: phone,
+      wilaya: wilaya,
+      size: sz,
+      product: "Nike TN",
+      price: "11500"
+    })
+  });
+
+  // اظهار رسالة نجاح
   document.getElementById('formContent').style.display = 'none';
   document.getElementById('success').style.display = 'block';
-
-  // إرسال الطلب إلى واتساب في الخلفية بعد تأكيد ظهور الرسالة (1 ثانية تأخير)
-  setTimeout(function() {
-    const msg = `🛒 طلب جديد - Nike TN%0A👤 الاسم: ${name}%0A📱 الهاتف: ${phone}%0A📍 الولاية: ${wilaya}%0A📏 المقاس: ${sz}%0A💰 السعر: 11500 دج%0A💳 الدفع عند الاستلام`;
-    window.open(`https://wa.me/${WA}?text=${msg}`, '_blank');
-  }, 1000);
 }
 
 
