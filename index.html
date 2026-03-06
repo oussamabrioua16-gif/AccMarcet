@@ -629,6 +629,14 @@ const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
 }, {threshold:0.1});
 document.querySelectorAll('.reveal').forEach(r => obs.observe(r));
+function sendOrder() {
+
+  fbq('track','Purchase'); // تتبع البيكسل
+
+  submitOrder(); // ارسال الطلب للواتساب
+
+  alert("✅ تم تأكيد طلبك بنجاح، سنتصل بك قريباً.");
+}
 </script>
 </body>
 </html>
