@@ -457,7 +457,9 @@ footer{
         <div><strong>دفع عند الاستلام ✅</strong>توصيل ل69 ولاية في الجزائر </div>
       </div>
 
-   <input type="button" class="btn-submit" value="تأكيد الطلب" onclick="submitOrder()">
+   <button type="button" class="btn-submit" onclick="submitOrder(event)">
+تأكيد الطلب
+</button>
 <button class="wa-btn" onclick="orderWhatsApp()">
   <span style="font-size:20px">💬</span> اطلب عبر WhatsApp
 </button>
@@ -596,54 +598,50 @@ function pickSize(el, s) {
 }
 
 // دالة إرسال الطلب إلى Make و Pixel
-function submitOrder() {
+function submitOrder(e){
 
-  const name = document.getElementById('name').value.trim();
-  const phone = document.getElementById('phone').value.trim();
-  const wilaya = document.getElementById('wilaya').value;
-  const sz = document.getElementById('sz').value;
-
-  if (!name || !phone || !wilaya || !sz) {
-    alert("⚠️ يرجى ملء جميع المعلومات");
-    return;
+  if(e){
+    e.preventDefault();
+    e.stopPropagation();
   }
 
-  // Facebook Pixel
-  fbq('track','Purchase');
+  const name = document.getElementById("name").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const wilaya = document.getElementById("wilaya").value;
+  const sz = document.getElementById("sz").value;
 
-  // ارسال الطلب الى Make
-  fetch("https://hook.eu1.make.com/8e6csxrfwmb6dmb8fb59zxkviii79v5g", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
+  if(!name || !phone || !wilaya || !sz){
+    alert("يرجى ملء جميع المعلومات");
+    return false;
+  }
+
+  // ارسال الطلب
+  fetch("https://hook.eu1.make.com/8e6csxrfwmb6dmb8fb59zxkviii79v5g",{
+    method:"POST",
+    headers:{
+      "Content-Type":"application/json"
     },
-    body: JSON.stringify({
-      name: name,
-      phone: phone,
-      wilaya: wilaya,
-      size: sz,
-      product: "Nike TN",
-      price: "11500"
+    body:JSON.stringify({
+      name:name,
+      phone:phone,
+      wilaya:wilaya,
+      size:sz,
+      product:"Nike TN",
+      price:"11500"
     })
   });
 
-  showMessage();
-  orderWhatsApp();
+  // Facebook Pixel
+  if(typeof fbq !== "undefined"){
+    fbq('track','Purchase');
+  }
+
+  alert("✅ تم إرسال الطلب بنجاح");
+
+  return false;
 }
 // دالة فتح واتساب (اختياري)
-function orderWhatsApp() {
 
-  const WA = "213XXXXXXXXX"; // ضع رقمك هنا
-
-  const name = document.getElementById('name').value.trim() || '...';
-  const phone = document.getElementById('phone').value.trim() || '...';
-  const wilaya = document.getElementById('wilaya').value || '...';
-  const sz = document.getElementById('sz').value || '...';
-
-  const msg = `🛒 طلب - Nike TN Triple Black%0A👤 ${name}%0A📱 ${phone}%0A📍 ${wilaya}%0A📏 المقاس: ${sz}%0A💰 11500 دج`;
-
-  window.open(`https://wa.me/${WA}?text=${msg}`, '_blank');
-}
 
 // دالة إظهار رسالة نجاح للمستخدم (يمكن استدعاؤها إذا أحببت)
 function showMessage() {
