@@ -633,7 +633,13 @@ function submitOrder(e){
     fbq('track','Purchase');
   }
 
-  alert("✅ تم إرسال الطلب بنجاح");
+ document.body.innerHTML = `
+  <div style="text-align:center; font-family:Arial; padding:60px; background:#f5f5f5; min-height:100vh;">
+    <h1>✅ تم تأكيد طلبك بنجاح</h1>
+    <p style="font-size:20px;">شكراً لك على طلبك.</p>
+    <p style="font-size:18px;">سيتصل بك فريقنا قريباً لتأكيد الطلب والتوصيل.</p>
+  </div>
+`;
 
   return false;
 }
