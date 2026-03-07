@@ -604,6 +604,10 @@ function submitOrder(e){
 
   const name = document.getElementById("name").value.trim();
   const phone = document.getElementById("phone").value.trim();
+  if(phone.length < 9 || isNaN(phone)){
+  alert("❌ رقم الهاتف غير صحيح");
+  return false;
+}
   const wilaya = document.getElementById("wilaya").value;
   const sz = document.getElementById("sz").value;
 
