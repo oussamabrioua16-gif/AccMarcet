@@ -457,7 +457,7 @@ footer{
         <div><strong>دفع عند الاستلام ✅</strong>توصيل ل69 ولاية في الجزائر </div>
       </div>
 
-    <input type="button" class="btn-submit" value="تأكيد الطلب" onclick="orderWhatsApp()">
+   <input type="button" class="btn-submit" value="تأكيد الطلب" onclick="submitOrder()">
 <button class="wa-btn" onclick="orderWhatsApp()">
   <span style="font-size:20px">💬</span> اطلب عبر WhatsApp
 </button>
@@ -597,35 +597,51 @@ function pickSize(el, s) {
 
 // دالة إرسال الطلب إلى Make و Pixel
 function submitOrder() {
+
   const name = document.getElementById('name').value.trim();
   const phone = document.getElementById('phone').value.trim();
   const wilaya = document.getElementById('wilaya').value;
   const sz = document.getElementById('sz').value;
 
-  if (!name) { alert('أدخل اسمك الكامل'); return; }
-  if (!phone || phone.length < 9) { alert('أدخل رقم هاتف صحيح'); return; }
-  if (!wilaya) { alert('اختر ولايتك'); return; }
-  if (!sz) { alert('اختر المقاس'); return; }
+  if (!name || !phone || !wilaya || !sz) {
+    alert("⚠️ يرجى ملء جميع المعلومات");
+    return;
+  }
 
+  // Facebook Pixel
   fbq('track','Purchase');
 
+  // ارسال الطلب الى Make
   fetch("https://hook.eu1.make.com/8e6csxrfwmb6dmb8fb59zxkviii79v5g", {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ name, phone, wilaya, size: sz, product: "Nike TN", price: "11500" })
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      name: name,
+      phone: phone,
+      wilaya: wilaya,
+      size: sz,
+      product: "Nike TN",
+      price: "11500"
+    })
   });
 
-  document.getElementById('formContent').style.display = 'none';
-  document.getElementById('success').style.display = 'block';
+  showMessage();
+  orderWhatsApp();
 }
-
 // دالة فتح واتساب (اختياري)
 function orderWhatsApp() {
+
+  const WA = "213XXXXXXXXX"; // ضع رقمك هنا
+
   const name = document.getElementById('name').value.trim() || '...';
   const phone = document.getElementById('phone').value.trim() || '...';
   const wilaya = document.getElementById('wilaya').value || '...';
   const sz = document.getElementById('sz').value || '...';
-  const msg = `🛒 طلب - Nike TN%0A👤 ${name}%0A📱 ${phone}%0A📍 ${wilaya}%0A📏 ${sz}%0A💰 11500 دج`;
+
+  const msg = `🛒 طلب - Nike TN Triple Black%0A👤 ${name}%0A📱 ${phone}%0A📍 ${wilaya}%0A📏 المقاس: ${sz}%0A💰 11500 دج`;
+
   window.open(`https://wa.me/${WA}?text=${msg}`, '_blank');
 }
 
