@@ -690,13 +690,15 @@ function submitOrder(e){
     fbq('track','Purchase');
   }
 
-  // رسالة النجاح
-  alert("✅ تم تأكيد طلبك بنجاح");
+ // رسالة النجاح
+alert("✅ تم تأكيد طلبك بنجاح");
 
-  // الانتقال لصفحة الشكر
-  window.location.href = "thankyou.html";
+// الانتقال لصفحة الشكر
+setTimeout(function() {
+    window.location.href = "thankyou.html";
+}, 500);
 
-  return false;
+return false;
 }
 function showMessage() {
   alert("✅ تم إرسال الطلب بنجاح");
