@@ -361,10 +361,62 @@ footer{
 /* Reveal */
 .reveal{opacity:0;transform:translateY(20px);transition:all 0.6s ease;}
 .reveal.visible{opacity:1;transform:translateY(0);}
+  /* PHONE BOX */
+.phone-box{
+  background:rgba(0,0,0,0.03);
+  border:1px solid rgba(0,0,0,0.1);
+  padding:12px;
+  border-radius:10px;
+  text-align:center;
+  margin-bottom:18px;
+  font-weight:700;
+  font-size:14px;
+}
+
+.phone-box a{
+  color:var(--red);
+  text-decoration:none;
+  font-size:16px;
+}
+  /* PRODUCT IMAGE FIX */
+.main-product-img{
+  width:100%;
+  border-radius:16px;
+  margin-bottom:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+  .btn-submit:active{
+  transform:scale(0.96);
+}
+  .photo-card{
+  transition:all 0.4s ease;
+}
+
+.photo-card:hover{
+  transform:translateY(-6px);
+}
 </style>
 </head>
 <body>
+<div class="container">
 
+<!-- صور المنتج -->
+<div class="product">
+
+<img src="img/shoe1.jpg" class="product-img">
+<img src="img/shoe2.jpg" class="product-img">
+<img src="img/shoe3.jpg" class="product-img">
+
+<h2>Nike TN Triple Black</h2>
+<div class="phone-box">
+
+📞 للطلب عبر الهاتف  
+<a href="tel:0562177330">0562177330</a>
+
+</div>
+<p class="price">11500 دج</p>
+
+</div>
 <!-- ===== TOP: IMAGE + FORM ===== -->
 <section class="top-section">
 
@@ -457,7 +509,7 @@ footer{
         <div><strong>دفع عند الاستلام ✅</strong>توصيل ل69 ولاية في الجزائر </div>
       </div>
 
-   <button type="button" class="btn-submit" onclick="submitOrder(event)">
+  <button class="btn-submit" onclick="submitOrder()">
 تأكيد الطلب
 </button>
     </div>
@@ -604,19 +656,20 @@ function submitOrder(e){
 
   const name = document.getElementById("name").value.trim();
   const phone = document.getElementById("phone").value.trim();
-  if(phone.length < 9 || isNaN(phone)){
-  alert("❌ رقم الهاتف غير صحيح");
-  return false;
-}
   const wilaya = document.getElementById("wilaya").value;
   const sz = document.getElementById("sz").value;
+
+  if(phone.length < 9 || isNaN(phone)){
+    alert("❌ رقم الهاتف غير صحيح");
+    return false;
+  }
 
   if(!name || !phone || !wilaya || !sz){
     alert("يرجى ملء جميع المعلومات");
     return false;
   }
 
-  // ارسال الطلب
+  // ارسال الطلب إلى Make
   fetch("https://hook.eu1.make.com/8e6csxrfwmb6dmb8fb59zxkviii79v5g",{
     method:"POST",
     headers:{
@@ -637,20 +690,14 @@ function submitOrder(e){
     fbq('track','Purchase');
   }
 
- document.body.innerHTML = `
-  <div style="text-align:center; font-family:Arial; padding:60px; background:#f5f5f5; min-height:100vh;">
-    <h1>✅ تم تأكيد طلبك بنجاح</h1>
-    <p style="font-size:20px;">شكراً لك على طلبك.</p>
-    <p style="font-size:18px;">سيتصل بك فريقنا قريباً لتأكيد الطلب والتوصيل.</p>
-  </div>
-`;
+  // رسالة النجاح
+  alert("✅ تم تأكيد طلبك بنجاح");
+
+  // الانتقال لصفحة الشكر
+  window.location.href = "thankyou.html";
 
   return false;
 }
-// دالة فتح واتساب (اختياري)
-
-
-// دالة إظهار رسالة نجاح للمستخدم (يمكن استدعاؤها إذا أحببت)
 function showMessage() {
   alert("✅ تم إرسال الطلب بنجاح");
 window.location.href = "thankyou.html";
