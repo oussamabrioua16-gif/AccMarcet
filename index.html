@@ -476,9 +476,9 @@ async function submitOrder() {
   let phone = document.getElementById('phone').value.trim();
   const size = document.getElementById('clientSize').value;
   const wilaya = document.getElementById('clientWilaya').value;
-  const baladiya = document.getElementById('clienBaladiya').value;
+  const baladiya = document.getElementById('baladiya').value;
   // التحقق من الحقول
-  if (!name || !phone || !size || !wilaya|| !baladiya) {
+  if (!name || !phone || !size || !wilaya) {
     alert('يرجى ملء جميع الحقول');
     return;
   }
