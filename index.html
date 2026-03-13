@@ -359,7 +359,7 @@ type="tel"
 id="phone"
 placeholder="5XXXXXXXX"
 maxlength="9"
-pattern="[567][0-9]{8}"
+pattern="[0-9]{9}"
 required
 >
 </div>
@@ -473,7 +473,7 @@ required
 async function submitOrder() {
 
   const name = document.getElementById('clientName').value.trim();
-  let phone = document.getElementById('clientPhone').value.trim();
+  let phone = document.getElementById('Phone').value.trim();
   const size = document.getElementById('clientSize').value;
   const wilaya = document.getElementById('clientWilaya').value;
 
@@ -484,7 +484,7 @@ async function submitOrder() {
   }
 
   // التحقق من رقم الهاتف (5 أو 6 أو 7 + 8 أرقام)
-  if(!/^[567][0-9]{8}$/.test(phone)){
+  if(!/^[0-9]{9}$/.test(phone)){
     alert('يرجى إدخال رقم هاتف صحيح');
     return;
   }
@@ -507,14 +507,14 @@ async function submitOrder() {
         size,
         wilaya,
         product: 'Nike Air Max TN Triple Black',
-        price: '10500 DZD',
+        price: '10900 DZD',
         date: new Date().toLocaleString('ar-DZ')
       })
     });
 
     if(typeof fbq !== "undefined"){
       fbq('track', 'Purchase', {
-        value: 10500,
+        value: 10900,
         currency: 'DZD',
         content_name: 'Nike TN Triple Black'
       });
@@ -526,7 +526,7 @@ async function submitOrder() {
 
     alert('حدث خطأ، يرجى المحاولة مجدداً');
     btn.disabled = false;
-    btn.textContent = '✅ تأكيد الطلب — 10,500 دج';
+    btn.textContent = '✅ تأكيد الطلب — 10900 دج';
 
   }
 }
