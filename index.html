@@ -488,7 +488,15 @@ async function submitOrder() {
     alert('يرجى إدخال رقم هاتف صحيح');
     return;
   }
-
+document.getElementById('phone').addEventListener('input', function() {
+  if (this.value.startsWith('0')) {
+    this.value = this.value.replace(/^0+/, '');
+    this.setCustomValidity('الرقم لا يبدأ بـ 0');
+    this.reportValidity();
+  } else {
+    this.setCustomValidity('');
+  }
+});
   // إضافة كود الجزائر
   phone = "213" + phone;
 
