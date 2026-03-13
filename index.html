@@ -484,7 +484,7 @@ async function submitOrder() {
   }
 
   // التحقق من رقم الهاتف (5 أو 6 أو 7 + 8 أرقام)
-  if(!/^[0-9]{9}$/.test(phone)){
+  if(!/^[1-9][0-9]{8}$/.test(phone)){
     alert('يرجى إدخال رقم هاتف صحيح');
     return;
   }
@@ -535,15 +535,6 @@ function showCongrats() {
   document.getElementById('successPopup').classList.remove('active');
   document.getElementById('congratsPage').classList.add('active');
 }
-  document.getElementById('phone').addEventListener('input', function() {
-  if (this.value.startsWith('0')) {
-    this.value = this.value.replace(/^0+/, '');
-    this.setCustomValidity('الرقم لا يبدأ بـ 0');
-    this.reportValidity();
-  } else {
-    this.setCustomValidity('');
-  }
-});
 </script>
 
 </body>
