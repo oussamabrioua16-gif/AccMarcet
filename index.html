@@ -285,6 +285,27 @@
       .section{padding:50px 20px}
       nav{padding:12px 20px}
     }
+   .phone-input{
+display:flex;
+align-items:center;
+border:1px solid #ddd;
+border-radius:8px;
+padding:10px;
+background:white;
+}
+
+.prefix{
+font-weight:bold;
+margin-right:8px;
+color:#333;
+}
+
+#phone{
+border:none;
+outline:none;
+width:100%;
+font-size:16px;
+} 
   </style>
 </head>
 <body>
@@ -305,12 +326,12 @@
 
     <div class="price-block">
       <div class="price-row">
-        <span class="price-new">10500</span>
+        <span class="price-new">10900</span>
         <span class="price-unit">دج</span>
         <span class="price-old">12900 دج</span>
-        <span class="discount-badge">وفّر 2400 دج</span>
+        <span class="discount-badge">وفّر 2000 دج</span>
       </div>
-      <div class="price-centimes">💰 مليون وخمسين ألف سنتيم فقط</div>
+      <div class="price-centimes">💰 مليون و تسعين ألف سنتيم فقط</div>
     </div>
 
     <div class="hero-img-stack">
@@ -329,15 +350,25 @@
       <label>الاسم الكامل</label>
       <input type="text" id="clientName" placeholder="أدخل اسمك الكامل"/>
     </div>
-    <div class="form-group">
-      <label>رقم الهاتف</label>
-      <input type="tel" id="clientPhone" placeholder="05XXXXXXXX"/>
-    </div>
+    <div class="field">
+<label>رقم الهاتف</label>
+<div class="phone-input">
+<span class="prefix">+213</span>
+<input 
+type="tel"
+id="phone"
+placeholder="5XXXXXXXX"
+maxlength="9"
+pattern="[567][0-9]{8}"
+required
+>
+</div>
+</div>
     <div class="form-group">
       <label>المقاس</label>
       <select id="clientSize">
         <option value="">اختر المقاس</option>
-        <option>39</option><option>43</option>
+        <option>39</option><option>40</option><option>41</option><option>42</option><option>43</option>
         </select>
     </div>
     <div class="form-group">
@@ -440,38 +471,63 @@
 
 <script>
 async function submitOrder() {
+
   const name = document.getElementById('clientName').value.trim();
-  const phone = document.getElementById('clientPhone').value.trim();
+  let phone = document.getElementById('clientPhone').value.trim();
   const size = document.getElementById('clientSize').value;
   const wilaya = document.getElementById('clientWilaya').value;
 
+  // التحقق من الحقول
   if (!name || !phone || !size || !wilaya) {
     alert('يرجى ملء جميع الحقول');
     return;
   }
+
+  // التحقق من رقم الهاتف (5 أو 6 أو 7 + 8 أرقام)
+  if(!/^[567][0-9]{8}$/.test(phone)){
+    alert('يرجى إدخال رقم هاتف صحيح');
+    return;
+  }
+
+  // إضافة كود الجزائر
+  phone = "213" + phone;
 
   const btn = document.getElementById('orderBtn');
   btn.disabled = true;
   btn.textContent = '⏳ جاري الإرسال...';
 
   try {
+
     await fetch('https://hook.eu1.make.com/8e6csxrfwmb6dmb8fb59zxkviii79v5g', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
-        name, phone, size, wilaya,
+        name,
+        phone,
+        size,
+        wilaya,
         product: 'Nike Air Max TN Triple Black',
         price: '10500 DZD',
         date: new Date().toLocaleString('ar-DZ')
       })
     });
 
-    fbq('track', 'Purchase', {value: 10500, currency: 'DZD', content_name: 'Nike TN Triple Black'});
+    if(typeof fbq !== "undefined"){
+      fbq('track', 'Purchase', {
+        value: 10500,
+        currency: 'DZD',
+        content_name: 'Nike TN Triple Black'
+      });
+    }
+
     document.getElementById('successPopup').classList.add('active');
+
   } catch(e) {
+
     alert('حدث خطأ، يرجى المحاولة مجدداً');
     btn.disabled = false;
     btn.textContent = '✅ تأكيد الطلب — 10,500 دج';
+
   }
 }
 
