@@ -328,12 +328,12 @@ font-size:16px;
 
     <div class="price-block">
       <div class="price-row">
-        <span class="price-new">11500</span>
+        <span class="price-new">10500</span>
         <span class="price-unit">دج</span>
         <span class="price-old">12900 دج</span>
-        <span class="discount-badge">وفّر 1400 دج</span>
+        <span class="discount-badge">وفّر 2400 دج</span>
       </div>
-      <div class="price-centimes">💰 مليون ومية و خمسين ألف سنتيم فقط</div>
+      <div class="price-centimes">💰 مليون و خمسين ألف سنتيم فقط</div>
     </div>
 
     <div class="hero-img-stack">
@@ -401,7 +401,7 @@ required
     </div>
    <input type="text" id="baladiya" name="baladiya" placeholder="اكتب بلديتك..." style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;font-family:'Cairo',sans-serif;font-size:14px;margin-top:10px;">
     <button class="btn-order" id="orderBtn" onclick="submitOrder()">
-      ✅ تأكيد الطلب — 11500 دج
+      ✅ تأكيد الطلب — 10500 دج
     </button>
     <div class="cod-note">🔒 الدفع عند الاستلام — آمن 100%</div>
   </div>
@@ -448,7 +448,7 @@ required
 
 <!-- FOOTER -->
 <footer>
-  <p>جميع الحقوق محفوظة © 2025 <strong>AccesMarket</strong> — التوصيل لجميع ولايات الجزائر 🇩🇿</p>
+  <p>جميع الحقوق محفوظة © 2025 <strong>AccMarket</strong> — التوصيل لجميع ولايات الجزائر 🇩🇿</p>
 </footer>
 
 <!-- POPUP: تمت العملية -->
@@ -465,7 +465,7 @@ required
 <div class="congrats-page" id="congratsPage">
   <div class="confetti">🎊</div>
   <h1>مبروك! <span>طلبك في الطريق</span></h1>
-  <p>شكراً لثقتك بـ AccesMarket!</p>
+  <p>شكراً لثقتك بـ AccMarket!</p>
   <div class="congrats-badge">سنتصل بك قريباً لتأكيد الطلب 📞</div>
   <p style="font-size:15px;">تحقق من هاتفك — فريقنا سيتواصل معك خلال أقل من 24 ساعة لتأكيد طلبك وترتيب التوصيل.</p>
   <div class="congrats-logo">Access<span>Market</span></div>
@@ -509,14 +509,14 @@ async function submitOrder() {
         size,
         wilaya,
         product: 'Nike Air Max TN Triple Black',
-        price: '11500 DZD',
+        price: '10500 DZD',
         date: new Date().toLocaleString('ar-DZ')
       })
     });
 
     if(typeof fbq !== "undefined"){
       fbq('track', 'Purchase', {
-        value: 11500,
+        value: 10500,
         currency: 'DZD',
         content_name: 'Nike TN Triple Black'
       });
@@ -528,7 +528,7 @@ async function submitOrder() {
 
     alert('حدث خطأ، يرجى المحاولة مجدداً');
     btn.disabled = false;
-    btn.textContent = '✅ تأكيد الطلب — 11500 دج';
+    btn.textContent = '✅ تأكيد الطلب — 10500 دج';
 
   }
 }
