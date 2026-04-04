@@ -359,9 +359,9 @@ font-size:16px;
 <input 
 type="tel"
 id="phone"
-placeholder="5XXXXXXXX"
-maxlength="9"
-pattern="[0-9]{9}"
+placeholder="05XXXXXXXX"
+maxlength="10"
+pattern="0[5-7][0-9]{8}"
 required
 >
 </div>
@@ -485,15 +485,15 @@ async function submitOrder() {
     return;
   }
 
-  // التحقق من رقم الهاتف (5 أو 6 أو 7 + 8 أرقام)
-  if(!/^[1-9][0-9]{8}$/.test(phone)){
-    alert('يرجى إدخال رقم هاتف صحيح');
-    return;
-  }
+  // التحقق من رقم الهاتف (يبدأ بـ 05, 06, 07)
+if(!/^0[5-7][0-9]{8}$/.test(phone)){
+  alert('يرجى إدخال رقم هاتف صحيح');
+  return;
+}
 
-  // إضافة كود الجزائر
-  phone = "213" + phone;
-
+// إضافة كود الجزائر
+phone = "213" + phone.substring(1);
+  
   const btn = document.getElementById('orderBtn');
   btn.disabled = true;
   btn.textContent = '⏳ جاري الإرسال...';
