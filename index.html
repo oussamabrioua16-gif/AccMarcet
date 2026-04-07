@@ -478,7 +478,7 @@ async function submitOrder() {
   let phone = document.getElementById('phone').value.trim();
   const size = document.getElementById('clientSize').value;
   const wilaya = document.getElementById('clientWilaya').value;
-  
+  const baladiya = document.getElementById('baladiya').value;
   // التحقق من الحقول
   if (!name || !phone || !size || !wilaya) {
     alert('يرجى ملء جميع الحقول');
@@ -508,6 +508,7 @@ phone = "213" + phone.substring(1);
         phone,
         size,
         wilaya,
+        bladiya,
         product: 'Nike Air Max TN Triple Black',
         price: '10500 DZD',
         date: new Date().toLocaleString('ar-DZ')
