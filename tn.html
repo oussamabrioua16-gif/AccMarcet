@@ -323,17 +323,17 @@ font-size:16px;
   <!-- LEFT: product -->
   <div class="hero-left">
     <div class="hero-badge">⚡ Nike Air Max Plus</div>
-    <h1>TN <span class="red">Triple Black</span><br/>Good</h1>
+    <h1>TN <span class="red">Triple Black</span><br/>Good qualité</h1>
     <p class="hero-sub">أسود بالكامل، راحة لا مثيل لها — يُوصَّل لبابك في جميع ولايات الجزائر 🇩🇿</p>
 
     <div class="price-block">
       <div class="price-row">
-        <span class="price-new">8500</span>
+        <span class="price-new">9000</span>
         <span class="price-unit">دج</span>
-        <span class="price-old">10500 دج</span>
-        <span class="discount-badge">وفّر 2000 دج</span>
+        <span class="price-old">11900 دج</span>
+        <span class="discount-badge">وفّر 2900 دج</span>
       </div>
-      <div class="price-centimes">💰  ثمنمية و خمسين ألف سنتيم فقط </div>
+      <div class="price-centimes">💰  تسعمية ألف سنتيم فقط </div>
     </div>
 
     <div class="hero-img-stack">
@@ -401,7 +401,7 @@ required
     </div>
    <input type="text" id="baladiya" name="baladiya" placeholder="اكتب بلديتك وعنوانك..." style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;font-family:'Cairo',sans-serif;font-size:14px;margin-top:10px;">
     <button class="btn-order" id="orderBtn" onclick="submitOrder()">
-      ✅ تأكيد الطلب — 8500دج
+      ✅ تأكيد الطلب — 9000دج
     </button>
     <div class="cod-note">🔒 الدفع عند الاستلام — آمن 100%</div>
   </div>
@@ -510,14 +510,14 @@ phone = "213" + phone.substring(1);
         wilaya,
         baladiya,
         product: 'Nike Air Max TN Triple Black',
-        price: '8500 DZD',
+        price: '9000 DZD',
         date: new Date().toLocaleString('ar-DZ')
       })
     });
 
     if(typeof fbq !== "undefined"){
       fbq('track', 'Purchase', {
-        value: 8500,
+        value: 9000,
         currency: 'DZD',
         content_name: 'Nike TN Triple Black'
       });
@@ -529,7 +529,7 @@ phone = "213" + phone.substring(1);
 
     alert('حدث خطأ، يرجى المحاولة مجدداً');
     btn.disabled = false;
-    btn.textContent = '✅ تأكيد الطلب —  8500 دج';
+    btn.textContent = '✅ تأكيد الطلب —  9000 دج';
 
   }
 }
