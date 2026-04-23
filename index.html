@@ -328,12 +328,12 @@ font-size:16px;
 
     <div class="price-block">
       <div class="price-row">
-        <span class="price-new">12500</span>
+        <span class="price-new">12900</span>
         <span class="price-unit">دج</span>
         <span class="price-old">13800 دج</span>
-        <span class="discount-badge">وفّر 1300 دج</span>
+        <span class="discount-badge">وفّر 1000 دج</span>
       </div>
-      <div class="price-centimes">💰 مليون و ميتين و خمسين ألف سنتيم فقط</div>
+      <div class="price-centimes">💰 مليون و ميتين و تسعين ألف سنتيم فقط</div>
     </div>
 
     <div class="hero-img-stack">
@@ -401,7 +401,7 @@ required
     </div>
    <input type="text" id="baladiya" name="baladiya" placeholder="اكتب بلديتك وعنوانك..." style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;font-family:'Cairo',sans-serif;font-size:14px;margin-top:10px;">
     <button class="btn-order" id="orderBtn" onclick="submitOrder()">
-      ✅ تأكيد الطلب — 12500دج
+      ✅ تأكيد الطلب — 12900دج
     </button>
     <div class="cod-note">🔒 الدفع عند الاستلام — آمن 100%</div>
   </div>
@@ -522,14 +522,14 @@ phone = "213" + phone.substring(1);
         wilaya,
         baladiya,
         product: 'Nike Air Max TN Triple Black',
-        price: '12500 DZD',
+        price: '12900 DZD',
         date: new Date().toLocaleString('ar-DZ')
       })
     });
 
     if(typeof fbq !== "undefined"){
       fbq('track', 'Purchase', {
-        value: 12500,
+        value: 12900,
         currency: 'DZD',
         content_name: 'Nike TN Triple Black'
       });
@@ -541,7 +541,7 @@ phone = "213" + phone.substring(1);
 
     alert('حدث خطأ، يرجى المحاولة مجدداً');
     btn.disabled = false;
-    btn.textContent = '✅ تأكيد الطلب —  12500 دج';
+    btn.textContent = '✅ تأكيد الطلب —  12900 دج';
 
   }
 }
