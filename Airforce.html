@@ -328,12 +328,12 @@ font-size:16px;
 
     <div class="price-block">
       <div class="price-row">
-        <span class="price-new">5900</span>
+        <span class="price-new">5500</span>
         <span class="price-unit">دج</span>
-        <span class="price-old">7500 دج</span>
-        <span class="discount-badge">وفّر 1600 دج</span>
+        <span class="price-old">8200 دج</span>
+        <span class="discount-badge">وفّر 2700 دج</span>
       </div>
-      <div class="price-centimes">💰 خمسمية و تسعين ألف سنتيم فقط</div>
+      <div class="price-centimes">💰 خمسمية و خمسين ألف سنتيم فقط</div>
     </div>
 
     <div class="hero-img-stack">
@@ -513,14 +513,14 @@ phone = "213" + phone.substring(1);
         wilaya,
         baladiya,
         product: 'Nike Air Max TN Triple Black',
-        price: '5900 DZD',
+        price: '5500 DZD',
         date: new Date().toLocaleString('ar-DZ')
       })
     });
 
     if(typeof fbq !== "undefined"){
       fbq('track', 'Purchase', {
-        value: 5900,
+        value: 5500,
         currency: 'DZD',
         content_name: 'Air Force one'
       });
@@ -532,7 +532,7 @@ phone = "213" + phone.substring(1);
 
     alert('حدث خطأ، يرجى المحاولة مجدداً');
     btn.disabled = false;
-    btn.textContent = '✅ تأكيد الطلب —  5900 دج';
+    btn.textContent = '✅ تأكيد الطلب —  5500 دج';
 
   }
 }
