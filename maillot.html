@@ -400,12 +400,7 @@ required
       </select>
     </div>
    <input type="text" id="baladiya" name="baladiya" placeholder="اكتب بلديتك وعنوانك..." style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;font-family:'Cairo',sans-serif;font-size:14px;margin-top:10px;">
-    <button class="btn-order" id="orderBtn" onclick="submitOrder()">
-      ✅ 3600دج 
-    </button>
-    <div class="cod-note">🔒 الدفع عند الاستلام — آمن 100%</div>
-  </div>
-  <!-- ===== خيارات الشراء ===== -->
+    <!-- ===== خيارات الشراء ===== -->
 <div style="background:#f9f9f9;border-radius:16px;padding:20px;margin-top:20px;">
   <p style="font-family:'Cairo',sans-serif;font-size:14px;font-weight:700;text-align:center;margin-bottom:15px;">🛒 اختر عدد القطع</p>
   
@@ -427,6 +422,12 @@ required
   <input type="hidden" id="quantite" value="1">
   <input type="hidden" id="prix_total" value="3600">
 </div>
+    <button class="btn-order" id="orderBtn" onclick="submitOrder()">
+     تأكيد الطلب ✅ 3600دج 
+    </button>
+    <div class="cod-note">🔒 الدفع عند الاستلام — آمن 100%</div>
+  </div>
+ 
 
 <script>
 function selectOpt(n) {
@@ -515,8 +516,9 @@ async function submitOrder() {
   const size = document.getElementById('clientSize').value;
   const wilaya = document.getElementById('clientWilaya').value;
   const baladiya = document.getElementById('baladiya').value;
+  const quantité = document.getElementById('quantité').value;
   // التحقق من الحقول
-  if (!name || !phone || !size || !wilaya) {
+  if (!name || !phone || !size || !wilaya|| !quantité) {
     alert('يرجى ملء جميع الحقول');
     return;
   }
@@ -547,7 +549,8 @@ phone = "213" + phone.substring(1);
         baladiya,
         product: 'قميص المنتخب الوطني 2026',
         price: '3600 DZD',
-        date: new Date().toLocaleString('ar-DZ')
+        date: new Date().toLocaleString('ar-DZ'),
+        quantité,
       })
     });
 
