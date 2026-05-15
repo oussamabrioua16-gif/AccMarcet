@@ -520,7 +520,7 @@ async function submitOrder() {
   const size = document.getElementById('clientSize').value;
   const wilaya = document.getElementById('clientWilaya').value;
   const baladiya = document.getElementById('baladiya').value;
-  const quantité = document.getElementById('quantité').value;
+  const quantite = document.getElementById('quantite').value;
   // التحقق من الحقول
   if (!name || !phone || !size || !wilaya) {
     alert('يرجى ملء جميع الحقول');
@@ -554,7 +554,7 @@ phone = "213" + phone.substring(1);
         product: 'قميص المنتخب الوطني 2026',
         price: '3600 DZD',
         date: new Date().toLocaleString('ar-DZ'),
-      
+      quantite,
       })
     });
 
