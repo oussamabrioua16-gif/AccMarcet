@@ -436,6 +436,10 @@ function selectOpt(n) {
   const prix = {1:'3600',2:'7000',3:'10000'};
   document.getElementById('quantite').value = n;
   document.getElementById('prix_total').value = prix[n];
+  
+  // تغيير السعر في زر التأكيد
+  const btn = document.getElementById('orderBtn');
+  if(btn) btn.textContent = '✅ تأكيد الطلب ' + prix[n] + 'دج';
 }
 selectOpt(1);
 </script>
