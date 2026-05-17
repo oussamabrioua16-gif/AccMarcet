@@ -338,8 +338,8 @@ font-size:16px;
 
     <div class="hero-img-stack">
       <img src="photo_2026-05-17_23-04-25.jpg" style="width:100%;border-radius:12px;object-fit:cover;">
-<img src="photo_2026-05-11_20-33-52.jpg" style="width:100%;border-radius:12px;object-fit:cover;">
-<img src="photo_2026-05-11_20-34-00.jpg" style="width:100%;border-radius:12px;object-fit:cover;">
+<img src="photo_2026-05-17_23-04-36.jpg" style="width:100%;border-radius:12px;object-fit:cover;">
+<img src="photo_2026-05-17_23-04-47.jpg" style="width:100%;border-radius:12px;object-fit:cover;">
     </div>
   </div>
 
@@ -370,7 +370,7 @@ required
       <label>المقاس</label>
       <select id="clientSize">
         <option value="">اختر المقاس</option>
-     <option>36</option><option>37</option>  <option>38</option> <option>39</option><option>40</option><option>41</option><option>42</option><option>43</option><option>44</option>
+      <option>39</option><option>40</option><option>41</option><option>42</option><option>43</option><option>44</option>
         </select>
     </div>
     <div class="form-group">
@@ -401,7 +401,7 @@ required
     </div>
    <input type="text" id="baladiya" name="baladiya" placeholder="اكتب بلديتك وعنوانك..." style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;font-family:'Cairo',sans-serif;font-size:14px;margin-top:10px;">
     <button class="btn-order" id="orderBtn" onclick="submitOrder()">
-     تأكيد الطلب ✅ 5500دج 
+     تأكيد الطلب ✅ 17500دج 
     </button>
     <div class="cod-note">🔒 الدفع عند الاستلام — آمن 100%</div>
   </div>
@@ -441,11 +441,11 @@ required
   <h2 style="font-family:'Cairo',sans-serif;font-size:22px;font-weight:900;margin-bottom:6px;">Nike Air Force 1 🤍</h2>
   <p style="color:#c9a227;font-size:13px;font-weight:700;margin-bottom:25px;">✅ Made in Vietnam — Premium Quality جودة عالية</p>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:500px;margin:0 auto;">
-    <img src="photo_2026-05-11_20-33-38.jpg" style="width:100%;border-radius:12px;object-fit:cover;height:200px;">
-    <img src="photo_2026-05-11_20-33-52.jpg" style="width:100%;border-radius:12px;object-fit:cover;height:200px;">
-    <img src="photo_2026-05-11_20-34-00.jpg" style="width:100%;border-radius:12px;object-fit:cover;height:200px;">
-    <img src="photo_2026-05-11_20-34-07.jpg" style="width:100%;border-radius:12px;object-fit:cover;height:200px;">
-    <img src="photo_2026-05-11_20-34-14.jpg" style="width:100%;border-radius:12px;object-fit:cover;height:200px;grid-column:span 2;">
+    <img src="photo_2026-05-17_23-04-36.jpg" style="width:100%;border-radius:12px;object-fit:cover;height:200px;">
+    <img src="photo_2026-05-17_23-04-42.jpg" style="width:100%;border-radius:12px;object-fit:cover;height:200px;">
+    <img src="photo_2026-05-17_23-04-47.jpg" style="width:100%;border-radius:12px;object-fit:cover;height:200px;">
+    <img src="photo_2026-05-17_23-05-15.jpg" style="width:100%;border-radius:12px;object-fit:cover;height:200px;">
+    <img src="photo_2026-05-17_23-05-03.jpg" style="width:100%;border-radius:12px;object-fit:cover;height:200px;grid-column:span 2;">
   </div>
 </section>
 
@@ -512,17 +512,16 @@ phone = "213" + phone.substring(1);
         size,
         wilaya,
         baladiya,
-        product: 'Nike Air Max TN Triple Black',
-        price: '5500 DZD',
+        price: '17500 DZD',
         date: new Date().toLocaleString('ar-DZ')
       })
     });
 
     if(typeof fbq !== "undefined"){
       fbq('track', 'Purchase', {
-        value: 5500,
+        value: 17500,
         currency: 'DZD',
-        content_name: 'Air Force one'
+        content_name: 'AirMax Tn Manchester'
       });
     }
 
@@ -532,7 +531,7 @@ phone = "213" + phone.substring(1);
 
     alert('حدث خطأ، يرجى المحاولة مجدداً');
     btn.disabled = false;
-    btn.textContent = '✅ تأكيد الطلب —  5500 دج';
+    btn.textContent = '✅ تأكيد الطلب —  17500دج';
 
   }
 }
