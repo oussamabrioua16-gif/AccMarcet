@@ -328,12 +328,12 @@ font-size:16px;
 
     <div class="price-block">
       <div class="price-row">
-        <span class="price-new">3200</span>
+        <span class="price-new">2900</span>
         <span class="price-unit">دج</span>
-        <span class="price-old">3800 دج</span>
-        <span class="discount-badge">وفّر 600 دج</span>
+        <span class="price-old">3600 دج</span>
+        <span class="discount-badge">وفّر 700 دج</span>
       </div>
-      <div class="price-centimes">💰 ثلثمية و عشرين ألف سنتيم فقط</div>
+      <div class="price-centimes">💰 ميتين و تسعين ألف سنتيم فقط</div>
     </div>
 
     <div class="hero-img-stack">
@@ -405,25 +405,25 @@ required
   <p style="font-family:'Cairo',sans-serif;font-size:14px;font-weight:700;text-align:center;margin-bottom:15px;">🛒 اختر عدد القطع</p>
   
   <div id="opt1" onclick="selectOpt(1)" style="border:2px solid #ddd;border-radius:12px;padding:15px;margin-bottom:10px;cursor:pointer;">
-    <p style="font-family:'Cairo',sans-serif;font-size:14px;font-weight:700;margin:0;">1 قطعة 3200 دج</p>
+    <p style="font-family:'Cairo',sans-serif;font-size:14px;font-weight:700;margin:0;">1 قطعة 2900 دج</p>
     <p style="font-family:'Cairo',sans-serif;font-size:12px;color:#666;margin:4px 0 0;">توصيل عادي</p>
   </div>
 
   <div id="opt2" onclick="selectOpt(2)" style="border:2px solid #ddd;border-radius:12px;padding:15px;margin-bottom:10px;cursor:pointer;">
-    <p style="font-family:'Cairo',sans-serif;font-size:14px;font-weight:700;margin:0;">2 قطع — 6000 دج 🎁</p>
+    <p style="font-family:'Cairo',sans-serif;font-size:14px;font-weight:700;margin:0;">2 قطع — 5500 دج 🎁</p>
     <p style="font-family:'Cairo',sans-serif;font-size:12px;color:#25a244;margin:4px 0 0;">✅ تخفيض</p>
   </div>
 
   <div id="opt3" onclick="selectOpt(3)" style="border:2px solid #ddd;border-radius:12px;padding:15px;margin-bottom:10px;cursor:pointer;">
-    <p style="font-family:'Cairo',sans-serif;font-size:14px;font-weight:700;margin:0;">3 قطع — 9000 دج 🔥</p>
+    <p style="font-family:'Cairo',sans-serif;font-size:14px;font-weight:700;margin:0;">3 قطع — 8500 دج 🔥</p>
     <p style="font-family:'Cairo',sans-serif;font-size:12px;color:#25a244;margin:4px 0 0;">✅ تخفيض  + توصيل مجاني</p>
   </div>
 
   <input type="hidden" id="quantite" value="1">
-  <input type="hidden" id="prix_total" value="3200">
+  <input type="hidden" id="prix_total" value="2900">
 </div>
     <button class="btn-order" id="orderBtn" onclick="submitOrder()">
-     تأكيد الطلب ✅3200دج 
+     تأكيد الطلب ✅2900دج 
     </button>
     <div class="cod-note">🔒 الدفع عند الاستلام — آمن 100%</div>
   </div>
@@ -433,7 +433,7 @@ required
 function selectOpt(n) {
   document.querySelectorAll('#opt1,#opt2,#opt3').forEach(el => el.style.border = '2px solid #ddd');
   document.getElementById('opt'+n).style.border = '2px solid #e53935';
-  const prix = {1:'3200',2:'6000',3:'9000'};
+  const prix = {1:'2900',2:'5500',3:'8500'};
   document.getElementById('quantite').value = n;
   document.getElementById('prix_total').value = prix[n];
   
@@ -552,7 +552,7 @@ phone = "213" + phone.substring(1);
         wilaya,
         baladiya,
         product: 'قميص المنتخب الوطني 2026',
-        price: '3200 DZD',
+        price: '2900 DZD',
         date: new Date().toLocaleString('ar-DZ'),
       quantite,
       })
@@ -560,7 +560,7 @@ phone = "213" + phone.substring(1);
 
     if(typeof fbq !== "undefined"){
       fbq('track', 'Purchase', {
-        value: 3200,
+        value: 2900,
         currency: 'DZD',
         content_name: 'Air Force one'
       });
@@ -572,7 +572,7 @@ phone = "213" + phone.substring(1);
 
     alert('حدث خطأ، يرجى المحاولة مجدداً');
     btn.disabled = false;
-    btn.textContent = '✅ تأكيد الطلب — 3200دج';
+    btn.textContent = '✅ تأكيد الطلب — 2900دج';
 
   }
 }
