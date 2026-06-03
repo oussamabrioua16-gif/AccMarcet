@@ -431,7 +431,7 @@ required
 function selectOpt(n) {
   document.querySelectorAll('#opt1,#opt2,#opt3').forEach(el => el.style.border = '2px solid #ddd');
   document.getElementById('opt'+n).style.border = '2px solid #e53935';
-  const prix = {1:'3200',2:'6200',3:'9000'};
+  const prix = {1:'3200',2:'6400',3:'9300'};
   document.getElementById('quantite').value = n;
   document.getElementById('prix_total').value = prix[n];
   
