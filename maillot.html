@@ -327,11 +327,11 @@ font-size:16px;
     <p class="hero-sub"> Made in Tailande</p>
     <div class="price-block">
       <div class="price-row">
-        <span class="price-new">3200</span>
+        <span class="price-new">3400</span>
         <span class="price-unit">دج</span>
         <span class="price-old">4200 دج</span>
       </div>
-      <div class="price-centimes">💰 ثلثمية  و عشرين ألف سنتيم فقط</div>
+      <div class="price-centimes">💰 ثلثمية  و أربعين ألف سنتيم فقط</div>
     </div>
 
     <div class="hero-img-stack">
@@ -403,17 +403,17 @@ required
   <p style="font-family:'Cairo',sans-serif;font-size:14px;font-weight:700;text-align:center;margin-bottom:15px;">🛒 اختر عدد القطع</p>
   
   <div id="opt1" onclick="selectOpt(1)" style="border:2px solid #ddd;border-radius:12px;padding:15px;margin-bottom:10px;cursor:pointer;">
-    <p style="font-family:'Cairo',sans-serif;font-size:14px;font-weight:700;margin:0;">1 قطعة 3200 دج</p>
+    <p style="font-family:'Cairo',sans-serif;font-size:14px;font-weight:700;margin:0;">1 قطعة 3400 دج</p>
     <p style="font-family:'Cairo',sans-serif;font-size:12px;color:#666;margin:4px 0 0;">توصيل عادي</p>
   </div>
 
   <div id="opt2" onclick="selectOpt(2)" style="border:2px solid #ddd;border-radius:12px;padding:15px;margin-bottom:10px;cursor:pointer;">
-    <p style="font-family:'Cairo',sans-serif;font-size:14px;font-weight:700;margin:0;">2 قطع — 6400 دج 🎁</p>
+    <p style="font-family:'Cairo',sans-serif;font-size:14px;font-weight:700;margin:0;">2 قطع — 6800 دج 🎁</p>
     <p style="font-family:'Cairo',sans-serif;font-size:12px;color:#25a244;margin:4px 0 0;"> ✅   توصيل مجاني  </p>
   </div>
 
   <div id="opt3" onclick="selectOpt(3)" style="border:2px solid #ddd;border-radius:12px;padding:15px;margin-bottom:10px;cursor:pointer;">
-    <p style="font-family:'Cairo',sans-serif;font-size:14px;font-weight:700;margin:0;">3 قطع — 9300 دج 🔥</p>
+    <p style="font-family:'Cairo',sans-serif;font-size:14px;font-weight:700;margin:0;">3 قطع — 10000 دج 🔥</p>
     <p style="font-family:'Cairo',sans-serif;font-size:12px;color:#25a244;margin:4px 0 0;">✅ تخفيض  + توصيل مجاني </p>
   </div>
 
@@ -421,7 +421,7 @@ required
   <input type="hidden" id="prix_total" value="3200">
 </div>
     <button class="btn-order" id="orderBtn" onclick="submitOrder()">
-     تأكيد الطلب ✅3200دج 
+     تأكيد الطلب ✅3400دج 
     </button>
     <div class="cod-note">🔒 الدفع عند الاستلام — آمن 100%</div>
   </div>
@@ -431,7 +431,7 @@ required
 function selectOpt(n) {
   document.querySelectorAll('#opt1,#opt2,#opt3').forEach(el => el.style.border = '2px solid #ddd');
   document.getElementById('opt'+n).style.border = '2px solid #e53935';
-  const prix = {1:'3200',2:'6400',3:'9300'};
+  const prix = {1:'3400',2:'6800',3:'10000'};
   document.getElementById('quantite').value = n;
   document.getElementById('prix_total').value = prix[n];
   
@@ -550,7 +550,7 @@ phone = "213" + phone.substring(1);
         wilaya,
         baladiya,
         product: 'قميص المنتخب الوطني 2026',
-        price: '3200 DZD',
+        price: '3400 DZD',
         date: new Date().toLocaleString('ar-DZ'),
       quantite,
       })
@@ -558,7 +558,7 @@ phone = "213" + phone.substring(1);
 
     if(typeof fbq !== "undefined"){
       fbq('track', 'Purchase', {
-        value: 3200,
+        value: 3400,
         currency: 'DZD',
         content_name: 'maillot'
       });
@@ -570,7 +570,7 @@ phone = "213" + phone.substring(1);
 
     alert('حدث خطأ، يرجى المحاولة مجدداً');
     btn.disabled = false;
-    btn.textContent = '✅ تأكيد الطلب — 3200دج';
+    btn.textContent = '✅ تأكيد الطلب — 3400دج';
 
   }
 }
