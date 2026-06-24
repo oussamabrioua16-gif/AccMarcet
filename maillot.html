@@ -404,7 +404,7 @@ required
   
   <div id="opt1" onclick="selectOpt(1)" style="border:2px solid #ddd;border-radius:12px;padding:15px;margin-bottom:10px;cursor:pointer;">
     <p style="font-family:'Cairo',sans-serif;font-size:14px;font-weight:700;margin:0;">1 قطعة 2900 دج</p>
-    <p style="font-family:'Cairo',sans-serif;font-size:12px;color:#666;margin:4px 0 0;">توصيل عادي</p>
+
   </div>
 
   <div id="opt2" onclick="selectOpt(2)" style="border:2px solid #ddd;border-radius:12px;padding:15px;margin-bottom:10px;cursor:pointer;">
@@ -432,7 +432,7 @@ required
 function selectOpt(n) {
   document.querySelectorAll('#opt1,#opt2,#opt3').forEach(el => el.style.border = '2px solid #ddd');
   document.getElementById('opt'+n).style.border = '2px solid #e53935';
-  const prix = {1:'2900',2:'5800',3:'8700'};
+  const prix = {1:'2900',2:'5500',3:'8500'};
   document.getElementById('quantite').value = n;
   document.getElementById('prix_total').value = prix[n];
   
