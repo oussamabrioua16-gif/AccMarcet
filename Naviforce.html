@@ -20,7 +20,7 @@
       background:#f5f5f7;
       color:var(--text);
       line-height: 1.5;
-      overflow-x: hidden; /* يمنع التمرير الجانبي تماماً */
+      overflow-x: hidden;
       width: 100%;
     }
 
@@ -29,18 +29,19 @@
       background: #111;
       color: #fff;
       text-align: center;
-      padding: 8px 0;
+      padding: 10px 0;
       font-size: 14px;
       font-weight: 700;
+      position: sticky;
+      top: 0;
+      z-index: 1001;
     }
     .contact-bar a {
       color: var(--accent);
       text-decoration: none;
-      display: inline-block;
-      margin-right: 5px;
     }
 
-    /* Professional Header */
+    /* Header Section */
     .header-luxury{
         background: #fff;
         padding: 25px 15px;
@@ -60,34 +61,32 @@
         font-size: 24px;
         font-weight: 900;
         color: #000;
-        margin-bottom: 5px;
+        margin-bottom: 8px;
     }
     .header-tagline {
       font-size: 14px;
       color: #666;
       margin-bottom: 15px;
-      max-width: 90%;
-      margin-left: auto;
-      margin-right: auto;
+      padding: 0 10px;
     }
     .price-main{
-        font-size: 30px;
+        font-size: 32px;
         font-weight: 900;
         color: var(--primary);
     }
 
     .main-img-container{
-        width: 92%;
-        max-width: 400px;
+        width: 94%;
+        max-width: 450px;
         margin: 10px auto;
     }
     .main-img-container img{
         width: 100%;
         border-radius: 15px;
-        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     }
 
-    /* Smart Form Section - Optimized for Mobile */
+    /* Form Section */
     .order-card{
         width: 94%;
         max-width: 500px;
@@ -100,13 +99,13 @@
     .form-title{
         text-align: center;
         font-weight: 900;
-        font-size: 19px;
+        font-size: 20px;
         margin-bottom: 20px;
         color: var(--primary);
     }
     .input-row{ display: flex; gap: 10px; margin-bottom: 12px; }
-    .input-group{ flex: 1; display: flex; flex-direction: column; gap: 4px; }
-    .input-group label{ font-size: 12px; font-weight: 700; color: #555; }
+    .input-group{ flex: 1; display: flex; flex-direction: column; gap: 5px; }
+    .input-group label{ font-size: 13px; font-weight: 700; color: #555; }
     .input-group input, .input-group select{
         padding: 12px;
         border: 1.5px solid #eee;
@@ -117,26 +116,27 @@
         width: 100%;
     }
 
-    /* Smart Delivery Selector */
-    .delivery-title{ font-weight: 800; font-size: 13px; margin: 15px 0 8px; display: block; }
-    .delivery-grid{ display: flex; gap: 8px; }
+    /* Delivery Selector */
+    .delivery-title{ font-weight: 800; font-size: 14px; margin: 15px 0 10px; display: block; }
+    .delivery-grid{ display: flex; gap: 10px; }
     .delivery-item{
         flex: 1;
         border: 2px solid #eee;
-        border-radius: 12px;
-        padding: 10px 5px;
+        border-radius: 15px;
+        padding: 12px;
         text-align: center;
         cursor: pointer;
+        transition: 0.3s;
     }
     .delivery-item.active{ border-color: var(--primary); background: #f0f7ff; }
-    .delivery-item b{ display: block; font-size: 16px; color: var(--primary); }
-    .delivery-item span{ font-size: 11px; font-weight: 700; }
+    .delivery-item b{ display: block; font-size: 18px; color: var(--primary); }
+    .delivery-item span{ font-size: 12px; font-weight: 700; }
 
-    /* Color Selection */
-    .color-grid{ display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    /* Color Selector */
+    .color-grid{ display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
     .color-box{
-        padding: 10px; border: 1.5px solid #eee; border-radius: 10px;
-        text-align: center; font-size: 12px; font-weight: 700;
+        padding: 12px; border: 1.5px solid #eee; border-radius: 10px;
+        text-align: center; font-size: 13px; font-weight: 700; cursor: pointer;
     }
     .color-box.active{ background: var(--primary); color: #fff; border-color: var(--primary); }
 
@@ -148,22 +148,23 @@
         margin: 20px 0;
         border: 1px dashed #ccc;
     }
-    .summary-line{ display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 5px;}
-    .total-line{ border-top: 1px solid #eee; padding-top: 10px; font-weight: 900; font-size: 19px; color: var(--success);}
+    .summary-line{ display: flex; justify-content: space-between; font-size: 15px; margin-bottom: 5px;}
+    .total-line{ border-top: 1.5px solid #eee; padding-top: 10px; font-weight: 900; font-size: 22px; color: var(--success);}
 
     .btn-order{
-        width: 100%; padding: 18px; border: none; border-radius: 50px;
-        background: var(--primary); color: #fff; font-size: 19px; font-weight: 900;
-        cursor: pointer;
+        width: 100%; padding: 20px; border: none; border-radius: 50px;
+        background: var(--primary); color: #fff; font-size: 20px; font-weight: 900;
+        cursor: pointer; box-shadow: 0 8px 20px rgba(0, 82, 204, 0.2);
     }
 
-    /* Content Area */
-    .gallery{ display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 15px; }
-    .gallery img{ width: 100%; border-radius: 10px; }
+    /* Extra Images */
+    .gallery{ display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 20px; }
+    .gallery img{ width: 100%; border-radius: 12px; }
 
-    .content-area{ width: 94%; margin: 0 auto 100px; padding: 20px; background: #fff; border-radius: 15px; }
-    .content-area h2{ font-size: 18px; margin-bottom: 15px; color: var(--accent); }
-    .content-area li{ font-size: 14px; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+    /* Content Area */
+    .content-area{ width: 94%; margin: 0 auto 100px; padding: 25px 20px; background: #fff; border-radius: 20px; }
+    .content-area h2{ font-size: 20px; margin-bottom: 15px; color: var(--accent); border-bottom: 2px solid #f9f9f9; padding-bottom: 10px; }
+    .content-area li{ font-size: 15px; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
 
     .sticky-bar{
         position: fixed; bottom: 0; left: 0; right: 0; padding: 12px;
@@ -171,43 +172,41 @@
     }
     .sticky-btn{
         background: var(--primary); color: #fff; display: block;
-        text-align: center; padding: 12px; border-radius: 50px; text-decoration: none;
-        font-weight: 900; font-size: 16px;
+        text-align: center; padding: 14px; border-radius: 50px; text-decoration: none;
+        font-weight: 900; font-size: 18px;
     }
   </style>
 </head>
 <body>
 
-<!-- شريط الاتصال العلوي -->
 <div class="contact-bar">
   للاستفسار أو الطلب عبر الهاتف: 
   <a href="tel:0562177330">0562177330</a> 📞
 </div>
 
 <header class="header-luxury">
-    <span class="badge-original">ساعة أصلية 100%</span>
-    <h1>NAVIFORCE 8080</h1>
-    <!-- التعريف البسيط تحت العنوان -->
-    <p class="header-tagline">اكتشف مزيج الفخامة والرياضة في ساعة واحدة. تصميم ياباني متين يناسب إطلالتك اليومية والمناسبات الرسمية.</p>
+    <span class="badge-original">تخفيض محدود: ساعة أصلية</span>
+    <h1>NAVIFORCE ORIGINAL 8080</h1>
+    <p class="header-tagline">ساعة رجالية فاخرة تجمع بين التصميم الرياضي المبتكر وجودة الصناعة اليابانية. مثالية لكل زمان ومكان.</p>
     <div class="price-main">6900 دج</div>
 </header>
 
 <div class="main-img-container">
-    <img src="navi4.jpg" alt="Naviforce 8080">
+    <img src="navi7.jpg" alt="Naviforce 8080">
 </div>
 
 <!-- FORM -->
 <div class="order-card" id="orderForm">
-    <div class="form-title">🛒 أطلب الآن (الدفع عند الاستلام)</div>
+    <div class="form-title">🛒 معلومات الطلب</div>
     
     <div class="input-row">
         <div class="input-group">
             <label>الاسم الكامل</label>
-            <input type="text" id="name" placeholder="الاسم">
+            <input type="text" id="name" placeholder="اسمك">
         </div>
         <div class="input-group">
             <label>رقم الهاتف</label>
-            <input type="tel" id="phone" placeholder="05/06/07">
+            <input type="tel" id="phone" placeholder="0XXXXXXXXX">
         </div>
     </div>
 
@@ -215,58 +214,61 @@
         <div class="input-group">
             <label>الولاية</label>
             <select id="wilaya" onchange="updatePrices()">
-                <option value="">-- اختر --</option>
+                <option value="">-- اختر ولايتك --</option>
+                <!-- ستملأ برمجياً بـ 58 ولاية -->
             </select>
         </div>
         <div class="input-group">
-            <label>البلدية</label>
+            <label>البلدية / العنوان</label>
             <input type="text" id="baladiya" placeholder="البلدية">
         </div>
     </div>
 
-    <label class="delivery-title">🚚 مكان التوصيل:</label>
+    <label class="delivery-title">🚚 اختر مكان الاستلام:</label>
     <div class="delivery-grid">
         <div class="delivery-item active" id="deskCard" onclick="setDelivery('مكتب')">
             <b id="priceDesk">--</b>
-            <span>المكتب</span>
+            <span>مكتب التوصيل</span>
         </div>
         <div class="delivery-item" id="homeCard" onclick="setDelivery('المنزل')">
             <b id="priceHome">--</b>
-            <span>المنزل</span>
+            <span>باب المنزل</span>
         </div>
     </div>
 
-    <label class="delivery-title">🎨 اختر لون الساعة:</label>
+    <label class="delivery-title">🎨 اختر اللون المفضل:</label>
     <div class="color-grid">
-        <div class="color-box" onclick="setColor('أبيض', this)">أبيض</div>
-        <div class="color-box" onclick="setColor('أزرق', this)">أزرق</div>
-        <div class="color-box" onclick="setColor('أسود', this)">أسود</div>
-        <div class="color-box" onclick="setColor('أخضر', this)">أخضر</div>
+        <div class="color-box" onclick="setColor('أبيض وأسود', this)">أبيض وأسود</div>
+        <div class="color-box" onclick="setColor('أزرق ملكي', this)">أزرق ملكي</div>
+        <div class="color-box" onclick="setColor('أسود كامل', this)">أسود كامل</div>
+        <div class="color-box" onclick="setColor('أخضر جيشي', this)">أخضر جيشي</div>
     </div>
 
     <div class="summary-box">
-        <div class="summary-line"><span>التوصيل:</span> <b id="shippingLabel">0 دج</b></div>
-        <div class="total-line"><span>المجموع:</span> <b id="totalLabel">6900 دج</b></div>
+        <div class="summary-line"><span>سعر الساعة:</span> <b>6900 دج</b></div>
+        <div class="summary-line"><span>توصيل لـ <span id="wName">--</span>:</span> <b id="shippingLabel">0 دج</b></div>
+        <div class="total-line"><span>المجموع الكلي:</span> <b id="totalLabel">6900 دج</b></div>
     </div>
 
-    <button class="btn-order" onclick="submitToMake()">تأكيد الطلب</button>
+    <button class="btn-order" onclick="submitToMake()">إضغط هنا لتأكيد الطلب</button>
 </div>
 
 <div class="gallery">
     <img src="navi1.jpg" alt="">
     <img src="navi2.jpg" alt="">
     <img src="navi3.jpg" alt="">
-    <img src="navi5.jpg" alt="">
+    <img src="navi4.jpg" alt="">
 </div>
 
 <div class="content-area">
-    <h2>🏆 مميزات الساعة</h2>
+    <h2>🏆 لماذا هذه الساعة؟</h2>
     <ul>
-        <li>✅ ماكينة يابانية أصلية دقيقة جداً.</li>
-        <li>✅ مقاومة للماء (الوضوء ورذاذ المطر).</li>
-        <li>✅ زجاج صلب مقاوم للخدوش البسيطة.</li>
-        <li>✅ تأتي في علبة الماركة الأصلية NAVIFORCE.</li>
+        <li>✅ <b>أصلية 100%:</b> نضمن لك جودة الماركة العالمية.</li>
+        <li>✅ <b>فخامة التصميم:</b> هيكل فولاذي صلب وزجاج مقاوم للصدمات.</li>
+        <li>✅ <b>عملية:</b> تحتوي على تقويم كامل وعقارب فسفورية.</li>
+        <li>✅ <b>مقاومة للماء:</b> مناسبة للاستخدام اليومي والوضوء.</li>
     </ul>
+    <p style="margin-top:15px; font-size:13px; color:#777;">ملاحظة: تأتي الساعة في علبتها الأصلية الفاخرة مع بطاقة الضمان الدولية.</p>
 </div>
 
 <div class="sticky-bar">
@@ -274,67 +276,113 @@
 </div>
 
 <script>
+// قائمة الـ 58 ولاية بأسعار التوصيل (منزل / مكتب)
 const tariffs = {
-    "الجزائر": { home: 400, desk: 200 }, "البليدة": { home: 500, desk: 250 },
-    "وهران": { home: 700, desk: 400 }, "قسنطينة": { home: 700, desk: 400 },
-    "سطيف": { home: 700, desk: 400 }, "تلمسان": { home: 800, desk: 400 },
-    "تيبازة": { home: 600, desk: 350 }, "بومرداس": { home: 600, desk: 350 },
-    "أدرار": { home: 1100, desk: 600 }, "تمنراست": { home: 1300, desk: 800 }
-    // أضف البقية هنا بنفس الطريقة
+    "01 - أدرار": { home: 1100, desk: 600 }, "02 - الشلف": { home: 700, desk: 400 },
+    "03 - الأغواط": { home: 900, desk: 500 }, "04 - أم البواقي": { home: 800, desk: 400 },
+    "05 - باتنة": { home: 800, desk: 400 }, "06 - بجاية": { home: 700, desk: 400 },
+    "07 - بسكرة": { home: 900, desk: 500 }, "08 - بشار": { home: 1100, desk: 600 },
+    "09 - البليدة": { home: 500, desk: 250 }, "10 - البويرة": { home: 650, desk: 400 },
+    "11 - تمنراست": { home: 1300, desk: 800 }, "12 - تبسة": { home: 800, desk: 400 },
+    "13 - تلمسان": { home: 800, desk: 400 }, "14 - تيارت": { home: 800, desk: 400 },
+    "15 - تيزي وزو": { home: 650, desk: 400 }, "16 - الجزائر": { home: 400, desk: 200 },
+    "17 - الجلفة": { home: 900, desk: 500 }, "18 - جيجل": { home: 700, desk: 400 },
+    "19 - سطيف": { home: 700, desk: 400 }, "20 - سعيدة": { home: 800, desk: 400 },
+    "21 - سكيكدة": { home: 700, desk: 400 }, "22 - سيدي بلعباس": { home: 700, desk: 400 },
+    "23 - عنابة": { home: 700, desk: 400 }, "24 - قالمة": { home: 800, desk: 400 },
+    "25 - قسنطينة": { home: 700, desk: 400 }, "26 - المدية": { home: 600, desk: 400 },
+    "27 - مستغانم": { home: 700, desk: 400 }, "28 - المسيلة": { home: 800, desk: 500 },
+    "29 - معسكر": { home: 700, desk: 400 }, "30 - ورقلة": { home: 1000, desk: 500 },
+    "31 - وهران": { home: 700, desk: 400 }, "32 - البيض": { home: 1000, desk: 500 },
+    "33 - إليزي": { home: 1300, desk: 600 }, "34 - برج بوعريريج": { home: 700, desk: 400 },
+    "35 - بومرداس": { home: 600, desk: 350 }, "36 - الطارف": { home: 800, desk: 450 },
+    "37 - تندوف": { home: 1300, desk: 700 }, "38 - تيسمسيلت": { home: 800, desk: 400 },
+    "39 - الوادي": { home: 900, desk: 500 }, "40 - خنشلة": { home: 800, desk: 500 },
+    "41 - سوق أهراس": { home: 800, desk: 500 }, "42 - تيبازة": { home: 600, desk: 350 },
+    "43 - ميلة": { home: 700, desk: 400 }, "44 - عين الدفلى": { home: 600, desk: 400 },
+    "45 - النعامة": { home: 1000, desk: 550 }, "46 - عين تيموشنت": { home: 700, desk: 400 },
+    "47 - غرداية": { home: 1000, desk: 500 }, "48 - غليزان": { home: 700, desk: 400 },
+    "49 - تيميمون": { home: 1300, desk: 800 }, "50 - برج باجي مختار": { home: 1300, desk: 800 },
+    "51 - أولاد جلال": { home: 900, desk: 500 }, "52 - بني عباس": { home: 1300, desk: 800 },
+    "53 - عين صالح": { home: 1300, desk: 800 }, "54 - عين قزام": { home: 1300, desk: 800 },
+    "55 - توقرت": { home: 900, desk: 500 }, "56 - جانت": { home: 1300, desk: 800 },
+    "57 - المغير": { home: 900, desk: 500 }, "58 - المنيعة": { home: 1000, desk: 500 }
 };
 
-const priceItem = 6900;
-let deliveryType = 'مكتب';
-let chosenColor = '';
+const watchPrice = 6900;
+let delType = 'مكتب';
+let selectedCol = '';
 
-const selectW = document.getElementById('wilaya');
-Object.keys(tariffs).sort().forEach(w => {
-    let opt = document.createElement('option');
-    opt.value = w; opt.textContent = w;
-    selectW.appendChild(opt);
+// تعبئة الولايات في القائمة
+const sel = document.getElementById('wilaya');
+Object.keys(tariffs).forEach(w => {
+    let o = document.createElement('option');
+    o.value = w; o.textContent = w;
+    sel.appendChild(o);
 });
 
 function updatePrices() {
-    const w = selectW.value;
+    const w = sel.value;
     if(tariffs[w]) {
         document.getElementById('priceDesk').textContent = tariffs[w].desk + " دج";
         document.getElementById('priceHome').textContent = tariffs[w].home + " دج";
+        document.getElementById('wName').textContent = w.split('-')[1].trim();
         refreshTotal();
     }
 }
 
-function setDelivery(type) {
-    deliveryType = type;
-    document.getElementById('deskCard').classList.toggle('active', type === 'مكتب');
-    document.getElementById('homeCard').classList.toggle('active', type === 'المنزل');
+function setDelivery(t) {
+    delType = t;
+    document.getElementById('deskCard').classList.toggle('active', t === 'مكتب');
+    document.getElementById('homeCard').classList.toggle('active', t === 'المنزل');
     refreshTotal();
 }
 
 function setColor(c, el) {
-    chosenColor = c;
+    selectedCol = c;
     document.querySelectorAll('.color-box').forEach(b => b.classList.remove('active'));
     el.classList.add('active');
 }
 
 function refreshTotal() {
-    const w = selectW.value;
+    const w = sel.value;
     if(!tariffs[w]) return;
-    const ship = (deliveryType === 'مكتب') ? tariffs[w].desk : tariffs[w].home;
-    document.getElementById('shippingLabel').textContent = ship + " دج";
-    document.getElementById('totalLabel').textContent = (priceItem + ship) + " دج";
+    const s = (delType === 'مكتب') ? tariffs[w].desk : tariffs[w].home;
+    document.getElementById('shippingLabel').textContent = s + " دج";
+    document.getElementById('totalLabel').textContent = (watchPrice + s) + " دج";
 }
 
 async function submitToMake() {
     const name = document.getElementById('name').value;
     const phone = document.getElementById('phone').value;
-    if(!name || !phone || !selectW.value || !chosenColor) {
-        alert("أكمل البيانات أولاً"); return;
+    const w = sel.value;
+    if(!name || !phone || !w || !selectedCol) {
+        alert("يرجى ملء جميع الخانات واختيار اللون"); return;
     }
-    alert("جاري الإرسال...");
-    // هنا كود الـ Fetch الخاص بـ Make.com
+
+    const btn = document.querySelector('.btn-order');
+    btn.disabled = true; btn.textContent = "جاري الإرسال...";
+
+    try {
+        await fetch('https://hook.eu1.make.com/8e6csxrfwmb6dmb8fb59zxkviii79v5g', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                name, phone, wilaya: w,
+                address: document.getElementById('baladiya').value,
+                color: selectedCol,
+                delivery: delType,
+                total: document.getElementById('totalLabel').textContent
+            })
+        });
+        alert("تم استلام طلبك بنجاح! سنتصل بك قريباً.");
+    } catch(e) { alert("حدث خطأ في الإرسال"); }
+    finally { btn.disabled = false; btn.textContent = "إضغط هنا لتأكيد الطلب"; }
 }
 </script>
 </body>
 </html>
 
+5.  **التجاوب:** تم ضبط المسافات لتكون الصفحة مريحة جداً على الهواتف ولا تخرج عن الحدود.
 
+يمكنك نسخ هذا الكود الآن ورفعه على GitHub.
