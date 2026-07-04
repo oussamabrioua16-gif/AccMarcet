@@ -35,6 +35,7 @@
       width: 100%;
     }
 
+    /* شريط الاتصال العلوي */
     .contact-bar {
       background: #111; color: #fff; text-align: center;
       padding: 10px 0; font-size: 14px; font-weight: 700;
@@ -42,23 +43,39 @@
     }
     .contact-bar a { color: var(--accent); text-decoration: none; }
 
-    .header-luxury{ background: #fff; padding: 25px 15px; text-align: center; }
+    /* Header */
+    .header-luxury{ background: #fff; padding: 20px 15px; text-align: center; }
     .badge-original{
         background: var(--accent); color: #fff; padding: 4px 12px;
         border-radius: 50px; font-size: 11px; font-weight: 800;
         margin-bottom: 10px; display: inline-block;
     }
-    .header-luxury h1{ font-size: 24px; font-weight: 900; color: #000; margin-bottom: 8px; }
-    .header-tagline { font-size: 14px; color: #666; margin-bottom: 15px; padding: 0 10px; }
+    .header-luxury h1{ font-size: 24px; font-weight: 900; color: #000; margin-bottom: 5px; }
+    .header-tagline { font-size: 14px; color: #666; margin-bottom: 10px; padding: 0 10px; }
     .price-main{ font-size: 32px; font-weight: 900; color: var(--primary); }
 
-    .main-img-container{ width: 94%; max-width: 450px; margin: 10px auto; }
-    .main-img-container img{ width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+    /* الصور الرئيسية المزدوجة */
+    .hero-images {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 94%;
+        max-width: 450px;
+        margin: 10px auto;
+    }
+    .hero-images img {
+        width: 100%;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        border: 2px solid #fff;
+    }
 
+    /* Form Section */
     .order-card{
         width: 94%; max-width: 500px; margin: 20px auto;
         background: #fff; border-radius: 20px; padding: 20px 15px;
         border: 2px solid var(--primary);
+        box-shadow: 0 5px 20px rgba(0,0,0,0.05);
     }
     .form-title{ text-align: center; font-weight: 900; font-size: 20px; margin-bottom: 20px; color: var(--primary); }
     .input-row{ display: flex; gap: 10px; margin-bottom: 12px; }
@@ -99,6 +116,7 @@
         cursor: pointer;
     }
 
+    /* Content Area */
     .gallery{ display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 20px; }
     .gallery img{ width: 100%; border-radius: 12px; }
 
@@ -127,14 +145,17 @@
 <header class="header-luxury">
     <span class="badge-original">ساعة أصلية 100%</span>
     <h1>NAVIFORCE ORIGINAL 8080</h1>
-    <p class="header-tagline">جودة عالمية وأناقة لا تقاوم</p>
+    <p class="header-tagline">الفخامة والقوة في تصميم ياباني فريد. الساعة الأكثر طلباً وصلت مجدداً!</p>
     <div class="price-main">6900 دج</div>
 </header>
 
-<div class="main-img-container">
-    <img src="navi7.jpg" alt="Naviforce 8080">
+<!-- الصور الرئيسية المزدوجة (Navi7 و Navi3) كما طلبت -->
+<div class="hero-images">
+    <img src="navi7.jpg" alt="Naviforce 8080 Luxury">
+    <img src="navi3.jpg" alt="Naviforce 8080 Black Edition">
 </div>
 
+<!-- FORM -->
 <div class="order-card" id="orderForm">
     <div class="form-title">🛒 استمارة الطلب</div>
     
@@ -198,17 +219,17 @@
 <div class="gallery">
     <img src="navi1.jpg" alt="">
     <img src="navi2.jpg" alt="">
-    <img src="navi3.jpg" alt="">
     <img src="navi4.jpg" alt="">
+    <img src="navi5.jpg" alt="">
 </div>
 
 <div class="content-area">
     <h2>🏆 مميزات الساعة</h2>
     <ul>
-        <li>✅ أصلية 100% مع ضمان .</li>
-        <li>✅ مقاومة للماء والصدأ.</li>
-        <li>✅ تصميم فاخر يناسب جميع المناسبات.</li>
-        <li>✅ عقارب مضيئة لرؤية ليلية واضحة.</li>
+        <li>✅ أصلية 100% مع ضمان الجودة.</li>
+        <li>✅ ماكينة يابانية دقيقة وعمر طويل.</li>
+        <li>✅ مقاومة للماء والصدأ والخدوش.</li>
+        <li>✅ تصميم فاخر يناسب البدلات والملابس الرياضية.</li>
     </ul>
 </div>
 
