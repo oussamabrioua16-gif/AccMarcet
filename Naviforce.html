@@ -1,10 +1,21 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   <title>NAVIFORCE 8080 | اطلب الآن</title>
+
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1417653233051827');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1417653233051827&ev=PageView&noscript=1"/></noscript>
 
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet"/>
   <style>
@@ -287,13 +298,12 @@ async function submitToMake() {
     const address_detail = document.getElementById('address_full').value;
 
     if(!name || !phone || !wilaya || !selectedCol) {
-        alert("الرجاء إكمال الخانات المطلوبة"); return;
+        alert("الرجاء إكمال الخانات المطلوبة واختيار اللون"); return;
     }
 
     const btn = document.querySelector('.btn-order');
     btn.disabled = true; btn.textContent = "جاري الحفظ...";
 
-    // البيانات المطلوبة لـ Make
     const orderData = {
         timestamp: new Date().toLocaleString('ar-DZ'),
         customer_name: name,
@@ -301,7 +311,7 @@ async function submitToMake() {
         wilaya: wilaya,
         baladiya: baladiya,
         full_address: address_detail,
-        size_or_color: selectedCol, // وضع اللون في مكان القياس
+        size_or_color: selectedCol,
         product_name: 'NAVIFORCE ORIGINAL',
         product_ref: '8080',
         unit_price: '6900 دج',
@@ -315,12 +325,20 @@ async function submitToMake() {
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(orderData)
         });
-        alert("تم استلام طلبك بنجاح!");
-    } catch(e) { alert("خطأ في الاتصال"); }
-    finally { btn.disabled = false; btn.textContent = "إضغط هنا لتأكيد الطلب"; }
+
+        if (typeof fbq !== 'undefined') {
+          fbq('track', 'Purchase', { value: 6900, currency: 'DZD' });
+        }
+
+        alert("تم استلام طلبك بنجاح! سنتصل بك قريباً.");
+    } catch(e) { 
+        alert("خطأ في الاتصال، يرجى المحاولة مجدداً"); 
+    }
+    finally { 
+        btn.disabled = false; 
+        btn.textContent = "إضغط هنا لتأكيد الطلب"; 
+    }
 }
 </script>
 </body>
 </html>
-
-
