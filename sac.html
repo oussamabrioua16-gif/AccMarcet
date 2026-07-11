@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>حقيبة يد فاخرة - AccMarket</title>
+  <!-- إضافة مكتبة Swiper للتمرير بالسحب -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <style>
+    :root { --gold:#c9a227; --dark:#0a0a0a; --text:#f0f0f0; }
+    body { font-family: 'Cairo', sans-serif; background: var(--dark); color: var(--text); margin: 0; }
+    
+    /* تنسيق السلايدر */
+    .swiper { width: 100%; max-width: 500px; padding: 20px 0; }
+    .swiper-slide { border-radius: 20px; overflow: hidden; border: 2px solid #333; }
+    .swiper-slide img { width: 100%; display: block; }
+    
+    .content-box { padding: 20px; text-align: center; }
+    .promo-text { background: rgba(201, 162, 39, 0.1); border: 1px solid var(--gold); padding: 15px; border-radius: 10px; margin: 20px 0; font-weight: bold; }
+    
+    .btn-order { background: var(--gold); color: #000; padding: 15px 40px; border: none; border-radius: 50px; font-weight: 900; cursor: pointer; font-size: 18px; }
+  </style>
+</head>
+<body>
+
+<div class="content-box">
+  <h1>حقيبة اليد النسائية الأكثر طلباً</h1>
+  
+  <!-- شريط الصور بالسحب -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="1000135757_2.png" alt="حقيبة بيج"></div>
+      <div class="swiper-slide"><img src="1000135769.png" alt="حقيبة وردي"></div>
+      <div class="swiper-slide"><img src="1000135756_2.png" alt="حقيبة أخضر"></div>
+      <div class="swiper-slide"><img src="1000135753_3.png" alt="حقيبة بني"></div>
+      <div class="swiper-slide"><img src="1000135754_2.png" alt="حقيبة أسود"></div>
+    </div>
+  </div>
+
+  <div class="promo-text">
+    ✨ حقيبة أصلية مستوردة من الصين بجودة تصنيع عالمية 🇨🇳<br>
+    جلد عالي الجودة يدوم طويلاً وتصميم عصري يواكب الموضة
+  </div>
+
+  <button class="btn-order" onclick="window.location.href='#order'">اطلب الآن بسعر مميز</button>
+</div>
+
+<!-- سكريبت السلايدر -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    effect: "cards",
+    grabCursor: true,
+    loop: true,
+  });
+</script>
+
+</body>
+</html>
