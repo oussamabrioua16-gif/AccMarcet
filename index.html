@@ -328,12 +328,12 @@ font-size:16px;
 
     <div class="price-block">
       <div class="price-row">
-        <span class="price-new">12900</span>
+        <span class="price-new">11900</span>
         <span class="price-unit">دج</span>
-        <span class="price-old">13800 دج</span>
-        <span class="discount-badge">وفّر 900 دج</span>
+        <span class="price-old">13500 دج</span>
+        <span class="discount-badge">وفّر 1600 دج</span>
       </div>
-      <div class="price-centimes">💰 مليون و ميتين و تسعين ألف سنتيم فقط</div>
+      <div class="price-centimes">💰 مليون و مية و تسعين ألف سنتيم فقط</div>
     </div>
 
     <div class="hero-img-stack">
@@ -370,7 +370,7 @@ required
       <label>المقاس</label>
       <select id="clientSize">
         <option value="">اختر المقاس</option>
- <option>41</option><option>42</option><option>44</option>                                                              
+  <option>40</option><option>41</option><option>42</option><option>44</option>                                                            
         </select>
     </div>
     <div class="form-group">
@@ -401,7 +401,7 @@ required
     </div>
    <input type="text" id="baladiya" name="baladiya" placeholder="اكتب بلديتك وعنوانك..." style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;font-family:'Cairo',sans-serif;font-size:14px;margin-top:10px;">
     <button class="btn-order" id="orderBtn" onclick="submitOrder()">
-      ✅ تأكيد الطلب — 12900دج
+      ✅ تأكيد الطلب — 11900دج
     </button>
     <div class="cod-note">🔒 الدفع عند الاستلام — آمن 100%</div>
   </div>
@@ -564,7 +564,7 @@ phone = "213" + phone.substring(1);
 
     if(typeof fbq !== "undefined"){
       fbq('track', 'Purchase', {
-        value: 12900,
+        value: 11900,
         currency: 'DZD',
         content_name: 'Nike TN Triple Black'
       });
@@ -576,7 +576,7 @@ phone = "213" + phone.substring(1);
 
     alert('حدث خطأ، يرجى المحاولة مجدداً');
     btn.disabled = false;
-    btn.textContent = '✅ تأكيد الطلب —  12900 دج';
+    btn.textContent = '✅ تأكيد الطلب —  11900 دج';
 
   }
 }
