@@ -73,7 +73,7 @@ body{
 .delivery-item.active{border-color:#111;background:#f5f5f5}
 .delivery-item b{display:block;font-size:18px;color:#111}
 .delivery-item span{font-size:12px;font-weight:700}
-.size-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:6px}
+.size-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-bottom:6px}
 .size-box{padding:11px 6px;border:1.5px solid #eee;border-radius:10px;text-align:center;font-size:14px;font-weight:800;cursor:pointer;background:#fff}
 .size-box.active{background:#111;color:#fff;border-color:#111}
 .summary-box{background:#f8f9fa;padding:15px;border-radius:12px;margin:20px 0;border:1px dashed #ccc}
@@ -145,7 +145,7 @@ footer strong{color:var(--accent)}
 }
 @media(max-width:600px){
   .input-row{flex-direction:column;gap:10px}
-  .size-grid{grid-template-columns:repeat(4,1fr)}
+  .size-grid{grid-template-columns:repeat(6,1fr)}
   .slider-track img{height:300px}
 }
 
@@ -183,7 +183,7 @@ footer strong{color:var(--accent)}
 }
 .order-card .size-grid{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns:repeat(6,1fr);
   gap:6px;
 }
 .order-card .size-box{
@@ -276,6 +276,14 @@ footer strong{color:var(--accent)}
 @media(max-width:700px){.reviews-grid{grid-template-columns:1fr}}
 </style>
 
+
+<style id="clothing-sizes-style">
+.order-card .size-grid{grid-template-columns:repeat(6,1fr)!important}
+@media(max-width:520px){
+  .order-card .size-grid{grid-template-columns:repeat(3,1fr)!important}
+}
+</style>
+
 </head>
 <body>
 
@@ -333,12 +341,12 @@ footer strong{color:var(--accent)}
     <div class="input-group">
       <label>المقاس</label>
       <div class="size-grid">
-        <div class="size-box" onclick="setSize('40',this)">S</div>
-        <div class="size-box" onclick="setSize('41',this)">M</div>
-        <div class="size-box" onclick="setSize('42',this)">L</div>
-        <div class="size-box" onclick="setSize('44',this)">XL</div>
-        <div class="size-box" onclick="setSize('44',this)">2XL</div>
-        <div class="size-box" onclick="setSize('44',this)">3XL</div>
+        <div class="size-box" onclick="setSize('S',this)">S</div>
+        <div class="size-box" onclick="setSize('M',this)">M</div>
+        <div class="size-box" onclick="setSize('L',this)">L</div>
+        <div class="size-box" onclick="setSize('XL',this)">XL</div>
+        <div class="size-box" onclick="setSize('2XL',this)">2XL</div>
+        <div class="size-box" onclick="setSize('3XL',this)">3XL</div>
       </div>
     </div>
   </div>
@@ -372,9 +380,9 @@ footer strong{color:var(--accent)}
   </div>
 
   <div class="summary-box">
-    <div class="summary-line"><span>سعر المنتج:</span></div>
+    <div class="summary-line"><span>سعر المنتج:</span><b id="productPriceLabel">2900 دج</b></div>
     <div class="summary-line"><span>سعر التوصيل:</span><b id="shippingLabel">0 دج</b></div>
-    <div class="total-line"><span>المجموع الكلي:</span></div>
+    <div class="total-line"><span>المجموع الكلي:</span><b id="totalLabel">2900 دج</b></div>
   </div>
 
   <button class="btn-order" id="orderBtn" onclick="submitToMake()">إضغط هنا لتأكيد الطلب — 2900 دج</button>
@@ -494,14 +502,23 @@ function setDelivery(t) {
 
 function refreshTotal() {
   const w = sel.value;
+  const orderBtn = document.getElementById('orderBtn');
+
   if(!tariffs[w]) {
     document.getElementById('shippingLabel').textContent = "0 دج";
     document.getElementById('totalLabel').textContent = productPrice + " دج";
+    if(orderBtn) orderBtn.textContent = "إضغط هنا لتأكيد الطلب — " + productPrice + " دج";
     return;
   }
+
   const s = delType === 'مكتب' ? tariffs[w].desk : tariffs[w].home;
+  const total = productPrice + s;
+
   document.getElementById('shippingLabel').textContent = s + " دج";
-  document.getElementById('totalLabel').textContent = (productPrice + s) + " دج";
+  document.getElementById('totalLabel').textContent = total + " دج";
+
+  // The confirmation button always shows the live total including delivery.
+  if(orderBtn) orderBtn.textContent = "إضغط هنا لتأكيد الطلب — " + total + " دج";
 }
 
 
@@ -532,7 +549,7 @@ document.getElementById('phone').addEventListener('blur', function(){
 
 async function submitToMake() {
   const name = document.getElementById('name').value.trim();
-  let phone = document.getElementById('phone').value.trim();
+  const phone = document.getElementById('phone').value.trim();
   const wilaya = sel.value;
   const baladiya = document.getElementById('baladiya').value.trim();
   const address_detail = document.getElementById('address_full').value.trim();
@@ -551,36 +568,69 @@ async function submitToMake() {
   btn.disabled = true;
   btn.textContent = "⏳ جاري الإرسال...";
 
+  const total = document.getElementById('totalLabel').textContent;
+  const shipping = document.getElementById('shippingLabel').textContent;
+
   try {
-    await fetch('https://hook.eu1.make.com/8e6csxrfwmb6dmb8fb59zxkviii79v5g', {
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({
-        timestamp:new Date().toLocaleString('ar-DZ'),
-        customer_name:name,
-        customer_phone:"213" + phone.substring(1),
-        wilaya:wilaya,
-        baladiya:baladiya,
-        full_address:address_detail,
-        size:selectedSize,
-        product_name:'Maillot Algérie super good made in Thailand',
-        product_ref:'TN-BLACK-2026',
-        unit_price:'2900 دج',
-        delivery_type:delType,
-        total_to_pay:document.getElementById('totalLabel').textContent
-      })
+    const data = {
+      timestamp: new Date().toLocaleString('ar-DZ'),
+      customer_name: name,
+      customer_phone: "213" + phone.substring(1),
+      wilaya: wilaya,
+      baladiya: baladiya,
+      full_address: address_detail,
+      size: selectedSize,
+      product_name: 'Maillot Algérie super good made in Thailand',
+      product_ref: 'MAILLOT-ALGERIE-2026',
+      unit_price: '2900 دج',
+      delivery_type: delType,
+      shipping_price: shipping,
+      total_to_pay: total
+    };
+
+    // Cross-origin form POST avoids browser CORS/preflight errors with Make.com.
+    let frame = document.getElementById('makeSubmitFrame');
+    if(!frame){
+      frame = document.createElement('iframe');
+      frame.name = 'makeSubmitFrame';
+      frame.id = 'makeSubmitFrame';
+      frame.style.display = 'none';
+      document.body.appendChild(frame);
+    }
+
+    const form = document.createElement('form');
+    form.method = 'POST';
+    form.action = 'https://hook.eu1.make.com/8e6csxrfwmb6dmb8fb59zxkviii79v5g';
+    form.target = 'makeSubmitFrame';
+    form.style.display = 'none';
+
+    Object.entries(data).forEach(([key,value])=>{
+      const input=document.createElement('input');
+      input.type='hidden';
+      input.name=key;
+      input.value=value ?? '';
+      form.appendChild(input);
     });
 
+    document.body.appendChild(form);
+    form.submit();
+    setTimeout(()=>form.remove(), 1000);
+
     if(typeof fbq !== 'undefined') {
-      fbq('track','Purchase',{value:2900,currency:'DZD',content_name:'Maillot Algérie super good made in Thailand'});
+      fbq('track','Purchase',{
+        value: parseInt(total.replace(/\D/g,'')) || 0,
+        currency:'DZD',
+        content_name:'Maillot Algérie super good made in Thailand'
+      });
     }
 
     document.getElementById('successPopup').classList.add('active');
   } catch(e) {
+    console.error(e);
     alert("حدث خطأ، يرجى المحاولة مجدداً");
   } finally {
     btn.disabled = false;
-    btn.textContent = " إضغط هنا لتأكيد الطلب ";
+    btn.textContent = "إضغط هنا لتأكيد الطلب";
   }
 }
 
