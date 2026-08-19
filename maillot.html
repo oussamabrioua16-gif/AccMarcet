@@ -264,6 +264,18 @@ footer strong{color:var(--accent)}
 @media(max-width:520px){.product-thumbs{justify-content:flex-start}.product-thumb{width:55px;height:55px;min-width:55px}}
 </style>
 
+
+<style id="new-reviews-style">
+.new-reviews{max-width:1050px;margin:30px auto;padding:0 16px;text-align:center}
+.new-reviews h2{font-size:23px;font-weight:900;margin-bottom:15px}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.review-card{background:#fff;border:1px solid #e7e7e7;border-radius:14px;padding:16px;text-align:right;box-shadow:0 5px 18px rgba(0,0,0,.06)}
+.review-card .stars{letter-spacing:2px;font-size:16px;margin-bottom:7px}
+.review-card p{font-size:14px;line-height:1.7;margin:0 0 9px;color:#333}
+.review-card strong{font-size:12px;color:#666}
+@media(max-width:700px){.reviews-grid{grid-template-columns:1fr}}
+</style>
+
 </head>
 <body>
 
@@ -276,7 +288,7 @@ footer strong{color:var(--accent)}
   <h1>Maillot Algérie super good made in Thailand</h1>
   <p class="header-tagline">مناسب للرياضة واللبس اليومي — Super Good Made in Thailand 🇩🇿</p>
 <div class="price-row-header">
-    <div class="price-main">2900 دج</div>
+    
     <div class="price-old-header">4200 دج</div>
     <div class="discount-tag">وفّر 1300 دج</div>
   </div>
@@ -321,10 +333,12 @@ footer strong{color:var(--accent)}
     <div class="input-group">
       <label>المقاس</label>
       <div class="size-grid">
-        <div class="size-box" onclick="setSize('40',this)">40</div>
-        <div class="size-box" onclick="setSize('41',this)">41</div>
-        <div class="size-box" onclick="setSize('42',this)">42</div>
-        <div class="size-box" onclick="setSize('44',this)">44</div>
+        <div class="size-box" onclick="setSize('40',this)">S</div>
+        <div class="size-box" onclick="setSize('41',this)">M</div>
+        <div class="size-box" onclick="setSize('42',this)">L</div>
+        <div class="size-box" onclick="setSize('44',this)">XL</div>
+        <div class="size-box" onclick="setSize('44',this)">2XL</div>
+        <div class="size-box" onclick="setSize('44',this)">3XL</div>
       </div>
     </div>
   </div>
@@ -358,9 +372,9 @@ footer strong{color:var(--accent)}
   </div>
 
   <div class="summary-box">
-    <div class="summary-line"><span>سعر المنتج:</span><b>2900 دج</b></div>
+    <div class="summary-line"><span>سعر المنتج:</span></div>
     <div class="summary-line"><span>سعر التوصيل:</span><b id="shippingLabel">0 دج</b></div>
-    <div class="total-line"><span>المجموع الكلي:</span><b id="totalLabel">2900 دج</b></div>
+    <div class="total-line"><span>المجموع الكلي:</span></div>
   </div>
 
   <button class="btn-order" id="orderBtn" onclick="submitToMake()">إضغط هنا لتأكيد الطلب — 2900 دج</button>
@@ -395,23 +409,6 @@ footer strong{color:var(--accent)}
 <section class="review-section">
   <p class="eyebrow">⭐ آراء زبائننا</p>
   <h2>ماذا قالوا عنا؟</h2>
-  <div class="review-card">
-    <img src="photo_2026-05-16_00-48-25.jpg" alt="آراء زبائننا">
-    <div class="review-text">
-      ⭐⭐⭐⭐⭐<br>
-      <strong>زبون راضي من الجزائر</strong><br>
-      "وصلت بسرعة وجودتها عالية — ربي يبارك فيك وربي يفتح عليك بيبان الرزق 🤲"
-    </div>
-  </div>
-</section>
-<footer>
-  <p>جميع الحقوق محفوظة © 2025 <strong>AccMarket</strong> — التوصيل لجميع ولايات الجزائر 🇩🇿</p>
-</footer>
-
-<div class="sticky-bar">
-  <a href="#orderForm" class="sticky-btn">اطلب الآن - 2900 دج</a>
-</div>
-
 <div class="popup-overlay" id="successPopup">
   <div class="popup">
     <div class="popup-icon">✅</div>
@@ -583,7 +580,7 @@ async function submitToMake() {
     alert("حدث خطأ، يرجى المحاولة مجدداً");
   } finally {
     btn.disabled = false;
-    btn.textContent = "إضغط هنا لتأكيد الطلب — 2900 دج";
+    btn.textContent = " إضغط هنا لتأكيد الطلب ";
   }
 }
 
@@ -635,6 +632,38 @@ refreshTotal();
   }));
 })();
 </script>
+
+
+<section class="new-reviews" aria-label="آراء الزبائن">
+  <h2>آراء زبائننا</h2>
+  <div class="reviews-grid">
+    <article class="review-card">
+      <div class="stars">★★★★★</div>
+      <p>“الخامة ممتازة والمايوه وصلني كما في الصور. مريح جدًا في اللبس.”</p>
+      <strong>محمد — الجزائر</strong>
+    </article>
+    <article class="review-card">
+      <div class="stars">★★★★★</div>
+      <p>“جودة جميلة جدًا مقابل السعر، والمقاس كان مناسبًا. أنصح به.”</p>
+      <strong>ياسين — وهران</strong>
+    </article>
+    <article class="review-card">
+      <div class="stars">★★★★★</div>
+      <p>“لبسته للرياضة وللاستعمال اليومي، مريح وخفيف والجودة ممتازة.”</p>
+      <strong>أمين — البليدة</strong>
+    </article>
+  </div>
+</section>
+
+
+<div class="bottom-cta">
+  <button type="button" class="btn-order" onclick="document.getElementById('orderForm')?.scrollIntoView({behavior:'smooth'})">اطلب الآن</button>
+</div>
+
+<style>
+.bottom-cta{max-width:1050px;margin:18px auto 25px;padding:0 16px}
+.bottom-cta .btn-order{display:block;width:100%;padding:13px;border:0;border-radius:12px;cursor:pointer;font-size:16px;font-weight:900}
+</style>
 
 </body>
 </html>
