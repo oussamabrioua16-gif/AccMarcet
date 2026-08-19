@@ -1,497 +1,417 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta property="og:title" content="قميص المنتخب الوطني 2026 | AccMarket"/>
-  <meta property="og:description" content="قميص المنتخب الوطني 2026 – توصيل لجميع ولايات الجزائر – الدفع عند الاستلام"/>
-  <title>قميص المنتخب الوطني 2026 | AccMarket</title>
-
-  <!-- Facebook Pixel -->
-  <script>
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-    document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1417653233051827');
-    fbq('track', 'PageView');
-    fbq('track', 'ViewContent', {content_name:'قميص المنتخب الوطني 2026',content_category:'Shoes',value:10500,currency:'DZD'});
-  </script>
-  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1417653233051827&ev=PageView&noscript=1"/></noscript>
-
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet"/>
-  <style>
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{
-      --bg: linear-gradient(160deg, #ffffff 0%, #e8e8e8 100%);
-      --card:#ffffff;
-      --card-shadow: 0 8px 40px rgba(0,0,0,0.10);
-      --red:#e8272a;
-      --red-dark:#c0191c;
-      --text:#1a1a1a;
-      --text-light:#666666;
-      --border:#e0e0e0;
-    }
-    html{scroll-behavior:smooth}
-    body{
-      font-family:'Cairo',sans-serif;
-      background: var(--bg);
-      color:var(--text);
-      overflow-x:hidden;
-      min-height:100vh;
-    }
-
-    /* NAV */
-    nav{
-      position:fixed;top:40px;left:0;righiit:0;z-index:100;
-      display:flex;align-items:center;justify-content:space-between;
-      padding:14px 40px;
-      background:rgba(255,255,255,0.88);
-      backdrop-filter:blur(16px);
-      border-bottom:1px solid var(--border);
-      box-shadow:0 2px 20px rgba(0,0,0,0.06);
-    }
-    .nav-logo{font-size:22px;font-weight:900;letter-spacing:1px;color:var(--text)}
-    .nav-logo span{color:var(--red)}
-    .nav-badge{
-      background:var(--red);color:#fff;
-      padding:6px 20px;border-radius:50px;
-      font-size:13px;font-weight:700;
-      box-shadow:0 4px 14px rgba(232,39,42,0.3);
-    }
-
-    /* HERO */
-    .hero{
-      min-height:100vh;
-      display:grid;
-      grid-template-columns:1fr 420px;
-      align-items:center;
-      padding:110px 48px 60px;
-      gap:48px;
-    }
-
-    /* LEFT */
-    .hero-left{animation:fadeUp 0.7s ease both}
-    .hero-badge{
-      display:inline-block;
-      background:rgba(232,39,42,0.08);
-      border:1.5px solid rgba(232,39,42,0.25);
-      color:var(--red);padding:6px 18px;
-      border-radius:50px;font-size:13px;font-weight:700;
-      margin-bottom:18px;
-    }
-    .hero-left h1{
-      font-size:clamp(32px,4.5vw,56px);
-      font-weight:900;line-height:1.1;
-      margin-bottom:16px;color:var(--text);
-    }
-    .hero-left h1 .red{color:var(--red)}
-    .hero-sub{font-size:16px;color:var(--text-light);margin-bottom:28px;line-height:1.8}
-
-    .price-block{margin-bottom:28px}
-    .price-row{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:8px}
-    .price-new{font-size:46px;font-weight:900;color:var(--text)}
-    .price-unit{font-size:18px;color:var(--text-light)}
-    .price-old{font-size:20px;color:#aaa;text-decoration:line-through}
-    .discount-badge{
-      background:var(--red);color:#fff;
-      padding:4px 14px;border-radius:50px;
-      font-size:13px;font-weight:700;
-    }
-    .price-centimes{
-      display:inline-block;
-      font-size:14px;color:var(--text-light);
-      background:#f5f5f5;
-      border:1px solid var(--border);
-      padding:5px 16px;border-radius:50px;
-    }
-
-    .hero-img-stack{
-      display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:32px;
-    }
-    .hero-img-stack img{
-      width:100%;border-radius:14px;object-fit:cover;height:150px;
-      transition:transform 0.4s;cursor:pointer;
-      box-shadow:0 4px 20px rgba(0,0,0,0.10);
-    }
-    .hero-img-stack img:hover{transform:scale(1.04)}
-    .hero-img-stack img:first-child{grid-column:1/3;height:260px}
-
-    /* RIGHT: FORM CARD */
-    .order-card{
-      background:var(--card);
-      border:1.5px solid var(--border);
-      border-radius:24px;
-      padding:36px 32px;
-      box-shadow:var(--card-shadow);
-      animation:fadeUp 0.7s 0.15s ease both;
-      position:sticky;top:90px;
-    }
-    .order-card h2{
-      font-size:22px;font-weight:900;
-      margin-bottom:4px;text-align:center;color:var(--text);
-    }
-    .order-card .sub{
-      color:var(--text-light);font-size:13px;
-      text-align:center;margin-bottom:24px;
-    }
-    .form-group{margin-bottom:14px}
-    .form-group label{
-      display:block;font-size:13px;font-weight:600;
-      color:var(--text-light);margin-bottom:6px;
-    }
-    .form-group input,
-    .form-group select{
-      width:100%;
-      background:#f9f9f9;
-      border:1.5px solid var(--border);
-      border-radius:10px;padding:12px 14px;
-      color:var(--text);font-size:14px;
-      font-family:'Cairo',sans-serif;
-      outline:none;transition:border-color 0.3s;direction:rtl;
-    }
-    .form-group input:focus,
-    .form-group select:focus{border-color:var(--red);background:#fff}
-    .btn-order{
-      width:100%;
-      background:linear-gradient(135deg,var(--red),var(--red-dark));
-      color:#fff;border:none;border-radius:50px;
-      padding:16px;font-size:17px;font-weight:800;
-      font-family:'Cairo',sans-serif;cursor:pointer;
-      transition:all 0.3s;
-      box-shadow:0 8px 28px rgba(232,39,42,0.30);
-      margin-top:8px;
-    }
-    .btn-order:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(232,39,42,0.42)}
-    .btn-order:disabled{opacity:0.6;cursor:not-allowed;transform:none}
-    .cod-note{text-align:center;margin-top:12px;font-size:12px;color:var(--text-light)}
-
-    /* FEATURES */
-    .section{padding:70px 48px}
-    .section-title{
-      text-align:center;font-size:clamp(24px,3vw,36px);
-      font-weight:900;margin-bottom:40px;color:var(--text);
-    }
-    .section-title span{color:var(--red)}
-    .features-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-    .feature-card{
-      background:#fff;border:1px solid var(--border);
-      border-radius:16px;padding:24px 16px;text-align:center;
-      box-shadow:0 4px 20px rgba(0,0,0,0.05);
-      transition:all 0.3s;
-    }
-    .feature-card:hover{border-color:rgba(232,39,42,0.3);transform:translateY(-4px);box-shadow:0 8px 30px rgba(0,0,0,0.10)}
-    .feature-icon{font-size:32px;margin-bottom:12px}
-    .feature-title{font-size:15px;font-weight:700;margin-bottom:6px;color:var(--text)}
-    .feature-desc{font-size:12px;color:var(--text-light);line-height:1.6}
-
-    /* GALLERY */
-    .gallery{
-      display:grid;
-      grid-template-columns:2fr 1fr 1fr;
-      grid-template-rows:250px 250px;
-      gap:10px;border-radius:20px;overflow:hidden;
-      box-shadow:0 8px 40px rgba(0,0,0,0.10);
-    }
-    .gallery-item{overflow:hidden;position:relative}
-    .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s}
-    .gallery-item:hover img{transform:scale(1.06)}
-    .gallery-item:first-child{grid-row:1/3}
-
-    /* FOOTER */
-    footer{
-      text-align:center;padding:36px;
-      border-top:1px solid var(--border);
-      color:var(--text-light);font-size:14px;
-      background:#f0f0f0;
-    }
-    footer strong{color:var(--red)}
-
-    /* SUCCESS POPUP */
-    .popup-overlay{
-      display:none;position:fixed;inset:0;z-index:200;
-      background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);
-      align-items:center;justify-content:center;
-    }
-    .popup-overlay.active{display:flex}
-    .popup{
-      background:#fff;
-      border-radius:24px;padding:48px 36px;
-      text-align:center;max-width:400px;width:90%;
-      box-shadow:0 20px 60px rgba(0,0,0,0.2);
-      animation:popIn 0.4s ease;
-    }
-    .popup-icon{font-size:64px;margin-bottom:14px}
-    .popup h3{font-size:24px;font-weight:900;margin-bottom:10px;color:var(--text)}
-    .popup p{color:var(--text-light);line-height:1.7;margin-bottom:28px}
-    .popup-btn{
-      background:var(--red);color:#fff;border:none;
-      border-radius:50px;padding:14px 36px;
-      font-size:15px;font-weight:700;
-      font-family:'Cairo',sans-serif;cursor:pointer;
-      box-shadow:0 6px 20px rgba(232,39,42,0.3);
-      transition:all 0.3s;
-    }
-    .popup-btn:hover{background:var(--red-dark);transform:translateY(-1px)}
-
-    /* CONGRATS PAGE */
-    .congrats-page{
-      display:none;position:fixed;inset:0;z-index:300;
-      background:linear-gradient(160deg,#fff 0%,#f0f0f0 100%);
-      align-items:center;justify-content:center;
-      flex-direction:column;text-align:center;
-      padding:40px;
-    }
-    .congrats-page.active{display:flex}
-    .confetti{font-size:80px;margin-bottom:20px;animation:bounce 1s ease infinite}
-    .congrats-page h1{
-      font-size:clamp(28px,5vw,48px);font-weight:900;
-      color:var(--text);margin-bottom:16px;
-    }
-    .congrats-page h1 span{color:var(--red)}
-    .congrats-page p{
-      font-size:18px;color:var(--text-light);
-      max-width:480px;line-height:1.8;margin-bottom:12px;
-    }
-    .congrats-badge{
-      display:inline-block;
-      background:rgba(232,39,42,0.08);
-      border:1.5px solid rgba(232,39,42,0.2);
-      color:var(--red);padding:8px 24px;
-      border-radius:50px;font-size:15px;font-weight:700;
-      margin:16px 0 32px;
-    }
-    .congrats-logo{
-      font-size:28px;font-weight:900;
-      color:var(--text);letter-spacing:1px;
-      margin-top:40px;opacity:0.4;
-    }
-    .congrats-logo span{color:var(--red)}
-
-    /* ANIMATIONS */
-    @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
-    @keyframes popIn{from{opacity:0;transform:scale(0.85)}to{opacity:1;transform:scale(1)}}
-    @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
-    @keyframes stars{0%{opacity:0;transform:scale(0)}50%{opacity:1}100%{opacity:0;transform:scale(1.5)}}
-
-    /* RESPONSIVE */
-    @media(max-width:900px){
-      .hero{grid-template-columns:1fr;padding:90px 20px 40px;gap:28px}
-      .order-card{position:static}
-      .features-grid{grid-template-columns:repeat(2,1fr)}
-      .gallery{grid-template-columns:1fr 1fr;grid-template-rows:auto}
-      .gallery-item:first-child{grid-row:auto;grid-column:1/3;height:220px}
-      .section{padding:50px 20px}
-      nav{padding:12px 20px}
-    }
-   .phone-input{
-display:flex;
-align-items:center;
-border:1px solid #ddd;
-border-radius:8px;
-padding:10px;
-background:white;
-}
-
-.prefix{
-font-weight:bold;
-margin-right:8px;
-color:#333;
-}
-
-#phone{
-border:none;
-outline:none;
-width:100%;
-font-size:16px;
-} 
-  </style>
-</head>
-<body>
-<div style="background:#25D366;text-align:center;padding:8px;font-family:'Cairo',sans-serif;font-size:14px;font-weight:700;">
-  📞 للتواصل: <a href="tel:+213562177330" style="color:#fff;text-decoration:none;">0562177330</a>
-</div>
-<!-- NAV -->
-<nav>
-  <div class="nav-logo">Acc<span>Market</span></div>
-  <div class="nav-badge">🔥 عرض محدود</div>
-</nav>
-
-<!-- HERO + FORM -->
-<section class="hero">
-  <!-- LEFT: product -->
-  <div class="hero-left">
-    <div class="hero-badge">⚡ قميص المنتخب الوطني 2026 </div>
-    <h1>Maillot <span class="red">Super </span><br/>Good</h1>
-    <p class="hero-sub"> Made in Tailande</p>
-    <div class="price-block">
-      <div class="price-row">
-        <span class="price-new">2900</span>
-        <span class="price-unit">دج</span>
-        <span class="price-old">4200 دج</span>
-      </div>
-      <div class="price-centimes">💰 ميتين  و تسعين ألف سنتيم فقط</div>
-    </div>
-
-    <div class="hero-img-stack">
-      <img src="photo_2026-05-14_18-24-15.jpg" style="width:100%;border-radius:12px;object-fit:cover;">
-<img src="photo_2026-05-14_18-24-20.jpg" style="width:100%;border-radius:12px;object-fit:cover;">
-<img src="photo_2026-05-14_18-24-15.jpg" style="width:100%;border-radius:12px;object-fit:cover;">
-    </div>
-  </div>
-
-  <!-- RIGHT: FORM -->
-  <div class="order-card">
-    <h2>🛒اطلب الآن</h2>
-    <p class="sub">أملأ بياناتك وسنتصل بك لتأكيد الطلب</p>
-
-    <div class="form-group">
-      <label>الاسم الكامل</label>
-      <input type="text" id="clientName" placeholder="أدخل اسمك الكامل"/>
-    </div>
-    <div class="field">
-<label>رقم الهاتف</label>
-<div class="phone-input">
-<span class="prefix">+213</span>
-<input 
-type="tel"
-id="phone"
-placeholder="05XXXXXXXX"
-maxlength="10"
-pattern="0[5-7][0-9]{8}"
-required
->
-</div>
-</div>
-    <div class="form-group">
-      <label>المقاس</label>
-      <select id="clientSize">
-        <option value="">اختر المقاس</option>
-  <option>S</option><option>L</option><option>XL</option>
-        </select>
-    </div>
-    <div class="form-group">
-      <label>الولاية</label>
-      <select id="clientWilaya">
-        <option value="">اختر ولايتك</option>
-        <option>01 - أدرار</option><option>02 - الشلف</option><option>03 - الأغواط</option>
-        <option>04 - أم البواقي</option><option>05 - باتنة</option><option>06 - بجاية</option>
-        <option>07 - بسكرة</option><option>08 - بشار</option><option>09 - البليدة</option>
-        <option>10 - البويرة</option><option>11 - تمنراست</option><option>12 - تبسة</option>
-        <option>13 - تلمسان</option><option>14 - تيارت</option><option>15 - تيزي وزو</option>
-        <option>16 - الجزائر</option><option>17 - الجلفة</option><option>18 - جيجل</option>
-        <option>19 - سطيف</option><option>20 - سعيدة</option><option>21 - سكيكدة</option>
-        <option>22 - سيدي بلعباس</option><option>23 - عنابة</option><option>24 - قالمة</option>
-        <option>25 - قسنطينة</option><option>26 - المدية</option><option>27 - مستغانم</option>
-        <option>28 - المسيلة</option><option>29 - معسكر</option><option>30 - ورقلة</option>
-        <option>31 - وهران</option><option>32 - البيض</option><option>33 - إليزي</option>
-        <option>34 - برج بوعريريج</option><option>35 - بومرداس</option><option>36 - الطارف</option>
-        <option>37 - تندوف</option><option>38 - تيسمسيلت</option><option>39 - الوادي</option>
-        <option>40 - خنشلة</option><option>41 - سوق أهراس</option><option>42 - تيبازة</option>
-        <option>43 - ميلة</option><option>44 - عين الدفلى</option><option>45 - النعامة</option>
-        <option>46 - عين تيموشنت</option><option>47 - غرداية</option><option>48 - غليزان</option>
-        <option>49 - تيميمون</option><option>50 - برج باجي مختار</option><option>51 - أولاد جلال</option>
-        <option>52 - بني عباس</option><option>53 - عين صالح</option><option>54 - عين قزام</option>
-        <option>55 - توقرت</option><option>56 - جانت</option><option>57 - المغير</option>
-        <option>58 - المنيعة</option>
-      </select>
-    </div>
-   <input type="text" id="baladiya" name="baladiya" placeholder="اكتب بلديتك وعنوانك..." style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;font-family:'Cairo',sans-serif;font-size:14px;margin-top:10px;">
-    <!-- ===== خيارات الشراء ===== -->
-<div style="background:#f9f9f9;border-radius:16px;padding:20px;margin-top:20px;">
-  <p style="font-family:'Cairo',sans-serif;font-size:14px;font-weight:700;text-align:center;margin-bottom:15px;">🛒 اختر عدد القطع</p>
-  
-  <div id="opt1" onclick="selectOpt(1)" style="border:2px solid #ddd;border-radius:12px;padding:15px;margin-bottom:10px;cursor:pointer;">
-    <p style="font-family:'Cairo',sans-serif;font-size:14px;font-weight:700;margin:0;">1 قطعة 2900 دج</p>
-
-  </div>
-
-  <div id="opt2" onclick="selectOpt(2)" style="border:2px solid #ddd;border-radius:12px;padding:15px;margin-bottom:10px;cursor:pointer;">
-    <p style="font-family:'Cairo',sans-serif;font-size:14px;font-weight:700;margin:0;">2 قطع — 5500 دج 🎁</p>
-    <p style="font-family:'Cairo',sans-serif;font-size:12px;color:#25a244;margin:4px 0 0;">✅ تخفيض
- </p>
-  </div>
-
-  <div id="opt3" onclick="selectOpt(3)" style="border:2px solid #ddd;border-radius:12px;padding:15px;margin-bottom:10px;cursor:pointer;">
-    <p style="font-family:'Cairo',sans-serif;font-size:14px;font-weight:700;margin:0;">3 قطع — 8500 دج 🔥</p>
-    <p style="font-family:'Cairo',sans-serif;font-size:12px;color:#25a244;margin:4px 0 0;">✅ تخفيض  + توصيل مجاني </p>
-  </div>
-
-  <input type="hidden" id="quantite" value="1">
-  <input type="hidden" id="prix_total" value="2900">
-</div>
-    <button class="btn-order" id="orderBtn" onclick="submitOrder()">
-     تأكيد الطلب ✅2900دج 
-    </button>
-    <div class="cod-note">🔒 الدفع عند الاستلام — آمن 100%</div>
-  </div>
- 
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta property="og:title" content="Maillot Algérie super good made in Thailand | AccMarket"/>
+<meta property="og:description" content="Maillot Algérie super good made in Thailand — توصيل لجميع ولايات الجزائر — الدفع عند الاستلام"/>
+<title>Maillot Algérie super good made in Thailand | AccMarket</title>
 
 <script>
-function selectOpt(n) {
-  document.querySelectorAll('#opt1,#opt2,#opt3').forEach(el => el.style.border = '2px solid #ddd');
-  document.getElementById('opt'+n).style.border = '2px solid #e53935';
-  const prix = {1:'2900',2:'5500',3:'8500'};
-  document.getElementById('quantite').value = n;
-  document.getElementById('prix_total').value = prix[n];
-  
-  // تغيير السعر في زر التأكيد
-  const btn = document.getElementById('orderBtn');
-  if(btn) btn.textContent = '✅ تأكيد الطلب ' + prix[n] + 'دج';
-}
-selectOpt(1);
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1417653233051827');
+fbq('track', 'PageView');
+fbq('track', 'ViewContent', {content_name:'Maillot Algérie super good made in Thailand',content_category:'Clothing',value:2900,currency:'DZD'});
 </script>
-</section>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1417653233051827&ev=PageView&noscript=1"/></noscript>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet"/>
 
-<!-- FEATURES -->
+<style>
+*,
+*::before,
+*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --primary:#111;
+  --accent:#e8272a;
+  --text:#1a1a1a;
+  --success:#28a745;
+  --border:#e0e0e0;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Cairo',sans-serif;
+  background:linear-gradient(160deg,#fff 0%,#f0f0f0 100%);
+  color:var(--text);line-height:1.5;overflow-x:hidden;width:100%;
+}
+.contact-bar{background:#25D366;color:#fff;text-align:center;padding:8px 0;font-size:14px;font-weight:700}
+.contact-bar a{color:#fff;text-decoration:none}
+.header-luxury{background:#fff;padding:22px 15px;text-align:center;border-bottom:1px solid #eee}
+.badge-original{background:var(--accent);color:#fff;padding:5px 14px;border-radius:50px;font-size:11px;font-weight:800;margin-bottom:10px;display:inline-block}
+.header-luxury h1{font-size:28px;font-weight:900;color:#000;margin-bottom:7px;line-height:1.25}
+.header-tagline{font-size:14px;color:#666;margin-bottom:12px;padding:0 10px;line-height:1.9}
+.size-under-title{display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap;margin:8px auto 12px}
+.size-label{font-size:13px;font-weight:800;color:#555}
+.size-chip{background:#111;color:#fff;border-radius:50px;padding:5px 12px;font-size:13px;font-weight:800}
+.price-row-header{display:flex;align-items:baseline;justify-content:center;gap:10px;flex-wrap:wrap}
+.price-main{font-size:34px;font-weight:900;color:var(--accent)}
+.price-old-header{font-size:16px;color:#999;text-decoration:line-through}
+.discount-tag{background:#111;color:#fff;font-size:11px;font-weight:800;padding:4px 10px;border-radius:50px}
+
+.slider-wrap{width:94%;max-width:500px;margin:15px auto 10px;position:relative;border-radius:15px;overflow:hidden;box-shadow:0 10px 25px rgba(0,0,0,.12);border:2px solid #fff;background:#fff}
+.slider-track{display:flex;transition:transform .45s ease}
+.slider-track img{width:100%;flex:0 0 100%;height:340px;object-fit:cover;display:block}
+.slider-arrow{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.55);color:#fff;border:1px solid rgba(255,255,255,.6);width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:20px;z-index:5;user-select:none}
+.slider-arrow.prev{right:10px} .slider-arrow.next{left:10px}
+.slider-dots{display:flex;justify-content:center;gap:7px;padding:10px 0;background:#fff}
+.slider-dot{width:8px;height:8px;border-radius:50%;background:#ddd;cursor:pointer;transition:.3s}
+.slider-dot.active{background:var(--accent);transform:scale(1.2)}
+
+.order-card{width:94%;max-width:500px;margin:20px auto;background:#fff;border-radius:20px;padding:20px 15px;border:2px solid #111;box-shadow:0 5px 20px rgba(0,0,0,.07)}
+.form-title{text-align:center;font-weight:900;font-size:21px;margin-bottom:20px;color:#111}
+.input-row{display:flex;gap:10px;margin-bottom:12px}
+.input-group{flex:1;display:flex;flex-direction:column;gap:5px}
+.input-group label{font-size:13px;font-weight:700;color:#555}
+.input-group input,.input-group select{padding:12px;border:1.5px solid #eee;border-radius:10px;font-family:'Cairo';font-size:14px;background:#fafafa;width:100%;outline:none}
+.input-group input:focus,.input-group select:focus{border-color:#111;background:#fff}
+.delivery-title{font-weight:800;font-size:14px;margin:15px 0 10px;display:block}
+.delivery-grid{display:flex;gap:10px}
+.delivery-item{flex:1;border:2px solid #eee;border-radius:15px;padding:12px;text-align:center;cursor:pointer;transition:.3s}
+.delivery-item.active{border-color:#111;background:#f5f5f5}
+.delivery-item b{display:block;font-size:18px;color:#111}
+.delivery-item span{font-size:12px;font-weight:700}
+.size-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:6px}
+.size-box{padding:11px 6px;border:1.5px solid #eee;border-radius:10px;text-align:center;font-size:14px;font-weight:800;cursor:pointer;background:#fff}
+.size-box.active{background:#111;color:#fff;border-color:#111}
+.summary-box{background:#f8f9fa;padding:15px;border-radius:12px;margin:20px 0;border:1px dashed #ccc}
+.summary-line{display:flex;justify-content:space-between;font-size:15px;margin-bottom:5px}
+.total-line{border-top:1.5px solid #eee;padding-top:10px;font-weight:900;font-size:22px;color:var(--success);display:flex;justify-content:space-between}
+.btn-order{width:100%;padding:18px;border:none;border-radius:50px;background:#111;color:#fff;font-size:19px;font-weight:900;cursor:pointer}
+.cod-note{text-align:center;margin-top:10px;font-size:12px;color:#666}
+
+.section{padding:45px 20px}
+.section-title{text-align:center;font-size:25px;font-weight:900;margin-bottom:25px}
+.section-title span{color:var(--accent)}
+.features-grid-index{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:1000px;margin:auto}
+.feature-card-index{background:#fff;border:1px solid var(--border);border-radius:16px;padding:22px 14px;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,.05)}
+.feature-icon-index{font-size:31px;margin-bottom:10px}
+.feature-title-index{font-size:15px;font-weight:800;margin-bottom:6px}
+.feature-desc-index{font-size:12px;color:#666;line-height:1.7}
+
+.gallery-title{text-align:center;font-weight:900;font-size:20px;margin:25px auto 10px;color:var(--accent)}
+.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:230px 230px;gap:10px;width:94%;max-width:700px;margin:0 auto;border-radius:18px;overflow:hidden}
+.gallery-item{overflow:hidden;position:relative;background:#eee}
+.gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:.4s}
+.gallery-item:hover img{transform:scale(1.04)}
+.gallery-item:first-child{grid-row:1/3}
+
+.review-section{background:#fff;padding:40px 20px;text-align:center}
+.review-section .eyebrow,.products-section .eyebrow{color:#e53935;letter-spacing:3px;font-size:11px;font-weight:700;margin-bottom:8px}
+.review-section h2,.products-section h2{font-size:22px;font-weight:900;margin-bottom:25px}
+.review-card{max-width:500px;margin:0 auto}
+.review-card img{width:100%;border-radius:16px;object-fit:cover;box-shadow:0 4px 20px rgba(0,0,0,.1)}
+.review-text{background:#f9f9f9;border-radius:16px;padding:20px;margin-top:15px;text-align:right;font-size:14px;color:#333;line-height:1.8}
+
+.products-section{background:#f9f9f9;padding:40px 20px;text-align:center}
+.products-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;max-width:500px;margin:0 auto}
+.product-card{background:#fff;border-radius:16px;padding:15px;box-shadow:0 4px 20px rgba(0,0,0,.08)}
+.product-card img{width:100%;border-radius:12px;object-fit:cover;height:160px;margin-bottom:10px}
+.product-name{font-weight:900;font-size:13px;margin-bottom:2px}
+.product-old{color:#999;font-size:11px;text-decoration:line-through;margin-bottom:2px}
+.product-price{color:#e53935;font-weight:900;font-size:16px;margin-bottom:10px}
+.product-card a{display:block;background:#111;color:#fff;font-size:13px;font-weight:700;padding:10px;border-radius:50px;text-decoration:none}
+
+footer{text-align:center;padding:36px;border-top:1px solid var(--border);color:#666;font-size:14px;background:#f0f0f0}
+footer strong{color:var(--accent)}
+
+.sticky-bar{position:fixed;bottom:0;left:0;right:0;padding:12px;background:rgba(255,255,255,.95);border-top:1px solid #eee;z-index:1000}
+.sticky-btn{background:#111;color:#fff;display:block;text-align:center;padding:14px;border-radius:50px;text-decoration:none;font-weight:900;font-size:18px}
+
+.popup-overlay{display:none;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.5);backdrop-filter:blur(8px);align-items:center;justify-content:center}
+.popup-overlay.active{display:flex}
+.popup{background:#fff;border-radius:24px;padding:48px 36px;text-align:center;max-width:400px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,.2)}
+.popup-icon{font-size:64px;margin-bottom:14px}
+.popup h3{font-size:24px;font-weight:900;margin-bottom:10px}
+.popup p{color:#666;line-height:1.7;margin-bottom:28px}
+.popup-btn{background:#111;color:#fff;border:none;border-radius:50px;padding:14px 36px;font-size:15px;font-weight:700;font-family:'Cairo';cursor:pointer}
+
+.congrats-page{display:none;position:fixed;inset:0;z-index:300;background:linear-gradient(160deg,#fff 0%,#f0f0f0 100%);align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:40px}
+.congrats-page.active{display:flex}
+.confetti{font-size:80px;margin-bottom:20px}
+.congrats-page h1{font-size:clamp(28px,5vw,48px);font-weight:900;color:#1a1a1a;margin-bottom:16px}
+.congrats-page h1 span{color:var(--accent)}
+.congrats-page p{font-size:18px;color:#666;max-width:480px;line-height:1.8;margin-bottom:12px}
+.congrats-badge{display:inline-block;background:rgba(232,39,42,.08);border:1.5px solid rgba(232,39,42,.2);color:var(--accent);padding:8px 24px;border-radius:50px;font-size:15px;font-weight:700;margin:16px 0 32px}
+.congrats-logo{font-size:28px;font-weight:900;color:#1a1a1a;letter-spacing:1px;margin-top:40px;opacity:.4}
+.congrats-logo span{color:var(--accent)}
+
+@media(max-width:900px){
+  .features-grid-index{grid-template-columns:repeat(2,1fr)}
+  .gallery{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .gallery-item:first-child{grid-row:auto;grid-column:1/3;height:220px}
+}
+@media(max-width:600px){
+  .input-row{flex-direction:column;gap:10px}
+  .size-grid{grid-template-columns:repeat(4,1fr)}
+  .slider-track img{height:300px}
+}
+
+
+
+/* Ultra-compact horizontal order form */
+.order-card{
+  width:97%;
+  max-width:1100px;
+  margin:18px auto;
+  padding:16px 18px;
+  border-radius:18px;
+}
+.order-card .form-title{
+  margin-bottom:12px;
+  font-size:20px;
+}
+.order-card .input-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-bottom:9px;
+}
+.order-card .input-group{
+  min-width:0;
+}
+.order-card .input-group label{
+  font-size:13px;
+}
+.order-card .input-group input,
+.order-card .input-group select{
+  padding:9px 10px;
+  height:43px;
+  font-size:14px;
+}
+.order-card .size-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:6px;
+}
+.order-card .size-box{
+  padding:9px 4px;
+  height:43px;
+  font-size:14px;
+}
+.order-card > .input-group{
+  margin-top:8px !important;
+}
+.order-card .delivery-title{
+  margin:9px 0 6px;
+  font-size:14px;
+}
+.order-card .delivery-grid{
+  gap:8px;
+}
+.order-card .delivery-item{
+  padding:8px;
+}
+.order-card .delivery-item b{
+  font-size:17px;
+}
+.order-card .summary-box{
+  margin:10px 0;
+  padding:9px 12px;
+}
+.order-card .summary-line{
+  margin-bottom:1px;
+  font-size:14px;
+}
+.order-card .total-line{
+  padding-top:6px;
+  font-size:19px;
+}
+.order-card .btn-order{
+  padding:13px;
+  font-size:17px;
+}
+.order-card .cod-note{
+  margin-top:7px;
+}
+@media(max-width:700px){
+  .order-card{
+    width:94%;
+    padding:14px 11px;
+  }
+  .order-card .input-row{
+    grid-template-columns:1fr 1fr;
+    gap:7px;
+  }
+  .order-card .input-group label{
+    font-size:12px;
+  }
+  .order-card .input-group input,
+  .order-card .input-group select{
+    font-size:13px;
+    padding:8px;
+  }
+}
+@media(max-width:480px){
+  .order-card .input-row{
+    grid-template-columns:1fr 1fr;
+  }
+  .order-card .delivery-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+</style>
+
+<style id="product-thumbs-style">
+.product-thumbs{width:94%;max-width:500px;margin:7px auto 18px;display:flex;gap:7px;justify-content:center;overflow-x:auto;padding:2px 2px 6px}
+.product-thumb{width:60px;height:60px;min-width:60px;object-fit:cover;border-radius:9px;border:2px solid transparent;cursor:pointer;background:#fff;box-shadow:0 2px 7px rgba(0,0,0,.08)}
+.product-thumb.active{border-color:#111}
+.product-use{text-align:center;max-width:700px;margin:8px auto 18px;padding:0 15px;font-size:15px;font-weight:700;color:#444}
+@media(max-width:520px){.product-thumbs{justify-content:flex-start}.product-thumb{width:55px;height:55px;min-width:55px}}
+</style>
+
+</head>
+<body>
+
+<div class="contact-bar">
+  📞 للتواصل: <a href="tel:+213562177330">0562177330</a>
+</div>
+
+<header class="header-luxury">
+  <span class="badge-original">⚡ 🇩🇿 Maillot Algérie — جودة ممتازة</span>
+  <h1>Maillot Algérie super good made in Thailand</h1>
+  <p class="header-tagline">مناسب للرياضة واللبس اليومي — Super Good Made in Thailand 🇩🇿</p>
+<div class="price-row-header">
+    <div class="price-main">2900 دج</div>
+    <div class="price-old-header">4200 دج</div>
+    <div class="discount-tag">وفّر 1300 دج</div>
+  </div>
+</header>
+<div class="product-use">مناسب للرياضة واللبس اليومي • جودة Super Good • Made in Thailand 🇩🇿</div>
+
+<div class="slider-wrap">
+  <div class="slider-track" id="sliderTrack">
+    <img src="photo_2026-05-14_18-23-39.jpg" alt="Maillot Algérie super good made in Thailand - 1">
+    <img src="photo_2026-05-14_18-23-49.jpg" alt="Maillot Algérie super good made in Thailand - 2">
+    <img src="photo_2026-05-14_18-23-55.jpg" alt="Maillot Algérie super good made in Thailand - 3">
+    <img src="photo_2026-05-14_18-24-00.jpg" alt="Maillot Algérie super good made in Thailand - 4">
+    <img src="photo_2026-05-14_18-24-04.jpg" alt="Maillot Algérie super good made in Thailand - 5">
+    <img src="photo_2026-05-14_18-24-09.jpg" alt="Maillot Algérie super good made in Thailand - 6">
+    <img src="photo_2026-05-14_18-24-15.jpg" alt="Maillot Algérie super good made in Thailand - 7">
+    <img src="photo_2026-05-14_18-24-20.jpg" alt="Maillot Algérie super good made in Thailand - 8">
+  </div>
+  
+<div class="product-thumbs" id="productThumbs">
+  <img src="photo_2026-05-14_18-23-39.jpg" alt="Maillot Algérie super good made in Thailand 1" class="product-thumb active" data-index="0">  <img src="photo_2026-05-14_18-23-49.jpg" alt="Maillot Algérie super good made in Thailand 2" class="product-thumb" data-index="1">  <img src="photo_2026-05-14_18-23-55.jpg" alt="Maillot Algérie super good made in Thailand 3" class="product-thumb" data-index="2">  <img src="photo_2026-05-14_18-24-00.jpg" alt="Maillot Algérie super good made in Thailand 4" class="product-thumb" data-index="3">  <img src="photo_2026-05-14_18-24-04.jpg" alt="Maillot Algérie super good made in Thailand 5" class="product-thumb" data-index="4">  <img src="photo_2026-05-14_18-24-09.jpg" alt="Maillot Algérie super good made in Thailand 6" class="product-thumb" data-index="5">  <img src="photo_2026-05-14_18-24-15.jpg" alt="Maillot Algérie super good made in Thailand 7" class="product-thumb" data-index="6">  <img src="photo_2026-05-14_18-24-20.jpg" alt="Maillot Algérie super good made in Thailand 8" class="product-thumb" data-index="7">
+</div>
+<div class="slider-arrow prev" onclick="moveSlide(1)">‹</div>
+  <div class="slider-arrow next" onclick="moveSlide(-1)">›</div>
+  <div class="slider-dots" id="sliderDots"></div>
+</div>
+
+<div class="order-card" id="orderForm">
+  <div class="form-title">🛒 استمارة الطلب</div>
+
+  <div class="input-row">
+    <div class="input-group">
+      <label>الاسم الكامل</label>
+      <input type="text" id="name" placeholder="اسمك الكامل">
+    </div>
+    <div class="input-group">
+      <label>رقم الهاتف</label>
+      <input type="tel" id="phone" placeholder="05XXXXXXXX" inputmode="numeric" autocomplete="tel" maxlength="10" minlength="10" pattern="0[5-7][0-9]{8}" required>
+    </div>
+  </div>
+
+  <div class="input-row">
+    <div class="input-group">
+      <label>المقاس</label>
+      <div class="size-grid">
+        <div class="size-box" onclick="setSize('40',this)">40</div>
+        <div class="size-box" onclick="setSize('41',this)">41</div>
+        <div class="size-box" onclick="setSize('42',this)">42</div>
+        <div class="size-box" onclick="setSize('44',this)">44</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="input-row">
+    <div class="input-group">
+      <label>الولاية</label>
+      <select id="wilaya" onchange="updatePrices()">
+        <option value="">-- اختر ولايتك --</option>
+      </select>
+    </div>
+    <div class="input-group">
+      <label>البلدية</label>
+      <input type="text" id="baladiya" placeholder="اسم البلدية">
+    </div>
+  </div>
+
+  <div class="input-group" style="margin-top:10px;">
+    <label>العنوان بالتفصيل</label>
+    <input type="text" id="address_full" placeholder="الحي أو رقم المنزل">
+  </div>
+
+  <label class="delivery-title">🚚 مكان الاستلام:</label>
+  <div class="delivery-grid">
+    <div class="delivery-item active" id="deskCard" onclick="setDelivery('مكتب')">
+      <b id="priceDesk">--</b><span>مكتب التوصيل</span>
+    </div>
+    <div class="delivery-item" id="homeCard" onclick="setDelivery('المنزل')">
+      <b id="priceHome">--</b><span>باب المنزل</span>
+    </div>
+  </div>
+
+  <div class="summary-box">
+    <div class="summary-line"><span>سعر المنتج:</span><b>2900 دج</b></div>
+    <div class="summary-line"><span>سعر التوصيل:</span><b id="shippingLabel">0 دج</b></div>
+    <div class="total-line"><span>المجموع الكلي:</span><b id="totalLabel">2900 دج</b></div>
+  </div>
+
+  <button class="btn-order" id="orderBtn" onclick="submitToMake()">إضغط هنا لتأكيد الطلب — 2900 دج</button>
+  <div class="cod-note">🔒 الدفع عند الاستلام — آمن 100%</div>
+</div>
+
 <section class="section">
   <h2 class="section-title">لماذا <span>AccMarket</span>؟</h2>
-  <div class="features-grid">
-    <div class="feature-card">
-      <div class="feature-icon">🚚</div>
-      <div class="feature-title">توصيل لكل الجزائر</div>
-      <div class="feature-desc">نوصّل للـ 58 ولاية عبر شركات الشحن المعتمدة</div>
+  <div class="features-grid-index">
+    <div class="feature-card-index">
+        <div class="feature-icon-index">🚚</div>
+        <div class="feature-title-index">توصيل لكل الجزائر</div>
+        <div class="feature-desc-index">نوصّل للـ 58 ولاية عبر شركات الشحن المعتمدة</div>
     </div>
-    <div class="feature-card">
-      <div class="feature-icon">💵</div>
-      <div class="feature-title">الدفع عند الاستلام</div>
-      <div class="feature-desc">تدفع فقط عند وصول الطلب — لا مخاطرة</div>
+<div class="feature-card-index">
+        <div class="feature-icon-index">💵</div>
+        <div class="feature-title-index">الدفع عند الاستلام</div>
+        <div class="feature-desc-index">تدفع فقط عند وصول الطلب — لا مخاطرة</div>
     </div>
-    <div class="feature-card">
-      <div class="feature-icon">✅</div>
-      <div class="feature-title">جودة مضمونة</div>
-      <div class="feature-desc">كل طلب يُفحص ويُعبّأ بعناية قبل الإرسال</div>
+<div class="feature-card-index">
+        <div class="feature-icon-index">✅</div>
+        <div class="feature-title-index">جودة مضمونة</div>
+        <div class="feature-desc-index">كل طلب يُفحص ويُعبّأ بعناية قبل الإرسال</div>
     </div>
-    <div class="feature-card">
-      <div class="feature-icon">📞</div>
-      <div class="feature-title">دعم سريع</div>
-      <div class="feature-desc">نردّ على استفساراتك عبر Messenger في أقل من ساعة</div>
+<div class="feature-card-index">
+        <div class="feature-icon-index">📞</div>
+        <div class="feature-title-index">دعم سريع</div>
+        <div class="feature-desc-index">نردّ على استفساراتك عبر Messenger في أقل من ساعة</div>
     </div>
   </div>
 </section>
-
-
-<!-- ===== GALLERY ===== -->
-<section style="background:#f9f9f9;padding:40px 20px;text-align:center;">
-  <p style="color:#e53935;letter-spacing:3px;font-size:12px;font-weight:700;margin-bottom:8px;">📸 معرض الصور</p>
-  <h2 style="font-family:'Cairo',sans-serif;font-size:22px;font-weight:900;margin-bottom:6px;">قميص المتخب الوطني 2026 🤍</h2>
-  <p style="color:#c9a227;font-size:13px;font-weight:700;margin-bottom:25px;">✅ Made in Tailande — Premium Quality جودة عالية</p>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:500px;margin:0 auto;">
-    <img src="photo_2026-05-14_18-23-39.jpg" style="width:100%;border-radius:12px;object-fit:cover;height:200px;">
-    <img src="photo_2026-05-14_18-23-49.jpg" style="width:100%;border-radius:12px;object-fit:cover;height:200px;">
-    <img src="photo_2026-05-14_18-24-00.jpg" style="width:100%;border-radius:12px;object-fit:cover;height:200px;">
-    <img src="photo_2026-05-14_18-24-04.jpg" style="width:100%;border-radius:12px;object-fit:cover;height:200px;">
-    <img src="photo_2026-05-14_18-24-09.jpg" style="width:100%;border-radius:12px;object-fit:cover;height:200px;grid-column:span 2;">
+<section class="review-section">
+  <p class="eyebrow">⭐ آراء زبائننا</p>
+  <h2>ماذا قالوا عنا؟</h2>
+  <div class="review-card">
+    <img src="photo_2026-05-16_00-48-25.jpg" alt="آراء زبائننا">
+    <div class="review-text">
+      ⭐⭐⭐⭐⭐<br>
+      <strong>زبون راضي من الجزائر</strong><br>
+      "وصلت بسرعة وجودتها عالية — ربي يبارك فيك وربي يفتح عليك بيبان الرزق 🤲"
+    </div>
   </div>
 </section>
-
-<!-- FOOTER -->
 <footer>
   <p>جميع الحقوق محفوظة © 2025 <strong>AccMarket</strong> — التوصيل لجميع ولايات الجزائر 🇩🇿</p>
 </footer>
 
-<!-- POPUP: تمت العملية -->
+<div class="sticky-bar">
+  <a href="#orderForm" class="sticky-btn">اطلب الآن - 2900 دج</a>
+</div>
+
 <div class="popup-overlay" id="successPopup">
   <div class="popup">
     <div class="popup-icon">✅</div>
@@ -501,7 +421,6 @@ selectOpt(1);
   </div>
 </div>
 
-<!-- CONGRATS PAGE -->
 <div class="congrats-page" id="congratsPage">
   <div class="confetti">🎊</div>
   <h1>مبروك! <span>طلبك في الطريق</span></h1>
@@ -512,67 +431,159 @@ selectOpt(1);
 </div>
 
 <script>
-async function submitOrder() {
+const tariffs = {
+  "01 - أدرار": {home:1100,desk:600}, "02 - الشلف": {home:700,desk:400},
+  "03 - الأغواط": {home:900,desk:500}, "04 - أم البواقي": {home:800,desk:400},
+  "05 - باتنة": {home:800,desk:400}, "06 - بجاية": {home:700,desk:400},
+  "07 - بسكرة": {home:900,desk:500}, "08 - بشار": {home:1100,desk:600},
+  "09 - البليدة": {home:500,desk:250}, "10 - البويرة": {home:650,desk:400},
+  "11 - تمنراست": {home:1300,desk:800}, "12 - تبسة": {home:800,desk:400},
+  "13 - تلمسان": {home:800,desk:400}, "14 - تيارت": {home:800,desk:400},
+  "15 - تيزي وزو": {home:650,desk:400}, "16 - الجزائر": {home:400,desk:200},
+  "17 - الجلفة": {home:900,desk:500}, "18 - جيجل": {home:700,desk:400},
+  "19 - سطيف": {home:700,desk:400}, "20 - سعيدة": {home:800,desk:400},
+  "21 - سكيكدة": {home:700,desk:400}, "22 - سيدي بلعباس": {home:700,desk:400},
+  "23 - عنابة": {home:700,desk:400}, "24 - قالمة": {home:800,desk:400},
+  "25 - قسنطينة": {home:700,desk:400}, "26 - المدية": {home:600,desk:400},
+  "27 - مستغانم": {home:700,desk:400}, "28 - المسيلة": {home:800,desk:500},
+  "29 - معسكر": {home:700,desk:400}, "30 - ورقلة": {home:1000,desk:500},
+  "31 - وهران": {home:700,desk:400}, "32 - البيض": {home:1000,desk:500},
+  "33 - إليزي": {home:1300,desk:600}, "34 - برج بوعريريج": {home:700,desk:400},
+  "35 - بومرداس": {home:600,desk:350}, "36 - الطارف": {home:800,desk:450},
+  "37 - تندوف": {home:1300,desk:700}, "38 - تيسمسيلت": {home:800,desk:400},
+  "39 - الوادي": {home:900,desk:500}, "40 - خنشلة": {home:800,desk:500},
+  "41 - سوق أهراس": {home:800,desk:500}, "42 - تيبازة": {home:600,desk:350},
+  "43 - ميلة": {home:700,desk:400}, "44 - عين الدفلى": {home:600,desk:400},
+  "45 - النعامة": {home:1000,desk:550}, "46 - عين تيموشنت": {home:700,desk:400},
+  "47 - غرداية": {home:1000,desk:500}, "48 - غليزان": {home:700,desk:400},
+  "49 - تيميمون": {home:1300,desk:800}, "50 - برج باجي مختار": {home:1300,desk:800},
+  "51 - أولاد جلال": {home:900,desk:500}, "52 - بني عباس": {home:1300,desk:800},
+  "53 - عين صالح": {home:1300,desk:800}, "54 - عين قزام": {home:1300,desk:800},
+  "55 - توقرت": {home:900,desk:500}, "56 - جانت": {home:1300,desk:800},
+  "57 - المغير": {home:900,desk:500}, "58 - المنيعة": {home:1000,desk:500}
+};
 
-  const name = document.getElementById('clientName').value.trim();
+const productPrice = 2900;
+let delType = 'مكتب';
+let selectedSize = '';
+
+const sel = document.getElementById('wilaya');
+Object.keys(tariffs).forEach(w => {
+  const o = document.createElement('option');
+  o.value = w; o.textContent = w; sel.appendChild(o);
+});
+
+function setSize(size, el) {
+  selectedSize = size;
+  document.querySelectorAll('.size-box').forEach(b => b.classList.remove('active'));
+  el.classList.add('active');
+}
+
+function updatePrices() {
+  const w = sel.value;
+  if(tariffs[w]) {
+    document.getElementById('priceDesk').textContent = tariffs[w].desk + " دج";
+    document.getElementById('priceHome').textContent = tariffs[w].home + " دج";
+    refreshTotal();
+  }
+}
+
+function setDelivery(t) {
+  delType = t;
+  document.getElementById('deskCard').classList.toggle('active', t === 'مكتب');
+  document.getElementById('homeCard').classList.toggle('active', t === 'المنزل');
+  refreshTotal();
+}
+
+function refreshTotal() {
+  const w = sel.value;
+  if(!tariffs[w]) {
+    document.getElementById('shippingLabel').textContent = "0 دج";
+    document.getElementById('totalLabel').textContent = productPrice + " دج";
+    return;
+  }
+  const s = delType === 'مكتب' ? tariffs[w].desk : tariffs[w].home;
+  document.getElementById('shippingLabel').textContent = s + " دج";
+  document.getElementById('totalLabel').textContent = (productPrice + s) + " دج";
+}
+
+
+function normalizePhone(value){
+  return value.replace(/\D/g,'').slice(0,10);
+}
+
+function isValidAlgerianMobile(phone){
+  return /^0[5-7][0-9]{8}$/.test(phone);
+}
+
+document.getElementById('phone').addEventListener('input', function(){
+  this.value = normalizePhone(this.value);
+  if(this.value.length === 0){
+    this.setCustomValidity('');
+  } else if(!isValidAlgerianMobile(this.value)){
+    this.setCustomValidity('أدخل رقم هاتف جزائري صحيح يبدأ بـ 05 أو 06 أو 07 ويتكون من 10 أرقام.');
+  } else {
+    this.setCustomValidity('');
+  }
+});
+
+document.getElementById('phone').addEventListener('blur', function(){
+  if(!isValidAlgerianMobile(this.value)){
+    this.reportValidity();
+  }
+});
+
+async function submitToMake() {
+  const name = document.getElementById('name').value.trim();
   let phone = document.getElementById('phone').value.trim();
-  const size = document.getElementById('clientSize').value;
-  const wilaya = document.getElementById('clientWilaya').value;
-  const baladiya = document.getElementById('baladiya').value;
-  const quantite = document.getElementById('quantite').value;
-  // التحقق من الحقول
-  if (!name || !phone || !size || !wilaya) {
-    alert('يرجى ملء جميع الحقول');
+  const wilaya = sel.value;
+  const baladiya = document.getElementById('baladiya').value.trim();
+  const address_detail = document.getElementById('address_full').value.trim();
+
+  if(!name || !phone || !selectedSize || !wilaya) {
+    alert("الرجاء إكمال الاسم والهاتف والمقاس والولاية");
     return;
   }
 
-  // التحقق من رقم الهاتف (يبدأ بـ 05, 06, 07)
-if(!/^0[5-7][0-9]{8}$/.test(phone)){
-  alert('يرجى إدخال رقم هاتف صحيح');
-  return;
-}
+  if(!/^0[5-7][0-9]{8}$/.test(phone)) {
+    alert("يرجى إدخال رقم هاتف صحيح يبدأ بـ 05 أو 06 أو 07");
+    return;
+  }
 
-// إضافة كود الجزائر
-phone = "213" + phone.substring(1);
-  
   const btn = document.getElementById('orderBtn');
   btn.disabled = true;
-  btn.textContent = '⏳ جاري الإرسال...';
+  btn.textContent = "⏳ جاري الإرسال...";
 
   try {
-
     await fetch('https://hook.eu1.make.com/8e6csxrfwmb6dmb8fb59zxkviii79v5g', {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({
-        name,
-        phone,
-        size,
-        wilaya,
-        baladiya,
-        product: 'قميص المنتخب الوطني 2026',
-        price: '2900 DZD',
-        date: new Date().toLocaleString('ar-DZ'),
-      quantite,
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        timestamp:new Date().toLocaleString('ar-DZ'),
+        customer_name:name,
+        customer_phone:"213" + phone.substring(1),
+        wilaya:wilaya,
+        baladiya:baladiya,
+        full_address:address_detail,
+        size:selectedSize,
+        product_name:'Maillot Algérie super good made in Thailand',
+        product_ref:'TN-BLACK-2026',
+        unit_price:'2900 دج',
+        delivery_type:delType,
+        total_to_pay:document.getElementById('totalLabel').textContent
       })
     });
 
-    if(typeof fbq !== "undefined"){
-      fbq('track', 'Purchase', {
-        value: 2900,
-        currency: 'DZD',
-        content_name: 'maillot'
-      });
+    if(typeof fbq !== 'undefined') {
+      fbq('track','Purchase',{value:2900,currency:'DZD',content_name:'Maillot Algérie super good made in Thailand'});
     }
 
     document.getElementById('successPopup').classList.add('active');
-
   } catch(e) {
-
-    alert('حدث خطأ، يرجى المحاولة مجدداً');
+    alert("حدث خطأ، يرجى المحاولة مجدداً");
+  } finally {
     btn.disabled = false;
-    btn.textContent = '✅ تأكيد الطلب — 2900دج';
-
+    btn.textContent = "إضغط هنا لتأكيد الطلب — 2900 دج";
   }
 }
 
@@ -580,6 +591,49 @@ function showCongrats() {
   document.getElementById('successPopup').classList.remove('active');
   document.getElementById('congratsPage').classList.add('active');
 }
+
+let slideIndex = 0;
+const track = document.getElementById('sliderTrack');
+const slideCount = track.children.length;
+const dotsWrap = document.getElementById('sliderDots');
+
+for(let i=0;i<slideCount;i++) {
+  const dot=document.createElement('div');
+  dot.className='slider-dot'+(i===0?' active':'');
+  dot.onclick=()=>{slideIndex=i;updateSlider()};
+  dotsWrap.appendChild(dot);
+}
+function updateSlider() {
+  track.style.transform=`translateX(${slideIndex*100}%)`;
+  document.querySelectorAll('.slider-dot').forEach((d,i)=>d.classList.toggle('active',i===slideIndex));
+}
+function moveSlide(dir) {
+  slideIndex=(slideIndex-dir+slideCount)%slideCount;
+  updateSlider();
+}
+let autoSlide=setInterval(()=>moveSlide(-1),4000);
+document.querySelector('.slider-wrap').addEventListener('mouseenter',()=>clearInterval(autoSlide));
+document.querySelector('.slider-wrap').addEventListener('mouseleave',()=>{autoSlide=setInterval(()=>moveSlide(-1),4000)});
+
+refreshTotal();
+</script>
+
+<script id="product-thumbs-script">
+(function(){
+  const thumbs=[...document.querySelectorAll('.product-thumb')];
+  const track=document.getElementById('sliderTrack');
+  if(!thumbs.length || !track) return;
+  thumbs.forEach((t,i)=>t.addEventListener('click',()=>{
+    if(typeof slideIndex !== 'undefined'){
+      slideIndex=i;
+      if(typeof updateSlider==='function') updateSlider();
+      else track.style.transform='translateX(-'+(i*100)+'%)';
+    }else{
+      track.style.transform='translateX(-'+(i*100)+'%)';
+    }
+    thumbs.forEach((x,n)=>x.classList.toggle('active',n===i));
+  }));
+})();
 </script>
 
 </body>
