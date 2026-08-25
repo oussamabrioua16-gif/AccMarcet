@@ -399,24 +399,22 @@ h1{
 
     <div class="price-box">
       <div class="price-row">
-        <span class="new-price">6500</span><span class="price-unit">دج</span>
+        <span class="new-price">5300</span><span class="price-unit">دج</span>
         <span class="old-price">9200 دج</span>
-        <span class="save">وفّر 2700 دج</span>
       </div>
       <div class="centime">💰 خمسمية وثلاثين ألف سنتيم فقط</div>
     </div>
 
    <div class="slider" id="slider">
   <div class="track" id="track">
-
+    <img src="air4.jpeg" alt="Nike Air Force One">
+    <img src="air8.jpeg" alt="Nike Air Force One">
     <img src="air1.jpeg" alt="Nike Air Force One">
     <img src="air2.jpeg" alt="Nike Air Force One">
     <img src="air3.jpeg" alt="Nike Air Force One">
-    <img src="air4.jpeg" alt="Nike Air Force One">
     <img src="air5.jpeg" alt="Nike Air Force One">
     <img src="air6.jpeg" alt="Nike Air Force One">
     <img src="air7.jpeg" alt="Nike Air Force One">
-    <img src="air8.jpeg" alt="Nike Air Force One">
     <img src="air9.jpeg" alt="Nike Air Force One">
 
   </div>
@@ -435,7 +433,7 @@ h1{
       <p>أملأ بياناتك وسنتصل بك لتأكيد الطلب</p>
     </div>
 
-    <div class="offer-strip">🔥 عرض اليوم: 6500 دج فقط — الدفع عند الاستلام</div>
+    <div class="offer-strip">🔥 عرض اليوم: 5300 دج فقط — الدفع عند الاستلام</div>
 
     <div class="form-row">
       <div class="form-group">
@@ -490,10 +488,12 @@ h1{
     <div class="summary">
       <div class="summary-line"><span>سعر المنتج</span><b>6500 دج</b></div>
       <div class="summary-line"><span>التوصيل</span><b id="shippingLabel">0 دج</b></div>
-      <div class="total"><span>المجموع</span><b id="totalLabel">6500 دج</b></div>
+      <div class="total"><span>المجموع</span><b id="totalLabel">5300 دج</b></div>
     </div>
 
-    <button class="btn-order" id="orderBtn" onclick="submitOrder()">تأكيد الطلب ✅ — 6500 دج</button>
+    <button class="btn-order" id="orderBtn" onclick="submitOrder()">
+  تأكيد الطلب ✅
+</button>
     <div class="cod">🔒 الدفع عند الاستلام — آمن 100%</div>
   </div>
 </section>
@@ -548,7 +548,7 @@ h1{
 
 <footer>جميع الحقوق محفوظة © 2026 <strong>AccMarket</strong> — التوصيل لجميع ولايات الجزائر 🇩🇿</footer>
 
-<div class="sticky"><a href="#orderForm">اطلب الآن — 6500 دج</a></div>
+<div class="sticky"><a href="#orderForm">اطلب الآن — 5300 دج</a></div>
 
 <div class="popup-overlay" id="successPopup">
   <div class="popup">
@@ -688,7 +688,7 @@ async function submitOrder(){
         wilaya:wilaya,
         baladiya:baladiya,
         product:"Nike Air Force one",
-        price:"6500 DZD",
+        price:"5300 DZD",
         delivery_type:deliveryType,
         shipping:shipping+" DZD",
         total:total+" DZD",
@@ -709,7 +709,7 @@ async function submitOrder(){
     alert("حدث خطأ، يرجى المحاولة مجدداً.");
   }finally{
     btn.disabled=false;
-    btn.textContent="تأكيد الطلب ✅ — 6500 دج";
+    btn.textContent="تأكيد الطلب ✅";
   }
 }
 
