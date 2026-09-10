@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>CURREN | اختر ساعتك</title>
+  <meta name="description" content="اكتشف ساعات CURREN 8402 و CURREN 8488. اختر الموديل المناسب لك واستكمل طلبك.">
+  <meta property="og:title" content="CURREN | اختر ساعتك">
+  <meta property="og:description" content="اختر بين CURREN 8402 و CURREN 8488">
+
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s){
+      if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)
+    }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init','1417653233051827');
+    fbq('track','PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=1417653233051827&ev=PageView&noscript=1">
+  </noscript>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --black:#111;
+      --dark:#181818;
+      --red:#e8272a;
+      --gold:#b08a45;
+      --cream:#faf8f4;
+      --text:#171717;
+      --muted:#707070;
+      --line:#e9e5df;
+    }
+
+    html{scroll-behavior:smooth}
+    body{
+      font-family:'Cairo',sans-serif;
+      background:
+        radial-gradient(circle at 50% -10%,#fff 0%,transparent 45%),
+        linear-gradient(180deg,#fbfaf8 0%,#f4f2ee 100%);
+      color:var(--text);
+      min-height:100vh;
+      padding-bottom:88px;
+    }
+
+    .topbar{
+      background:#111;
+      color:#fff;
+      text-align:center;
+      padding:9px 14px;
+      font-size:13px;
+      font-weight:700;
+    }
+
+    .topbar span{color:#f3c978}
+
+    header{
+      text-align:center;
+      padding:42px 18px 26px;
+      max-width:900px;
+      margin:auto;
+    }
+
+    .brand{
+      font-size:14px;
+      font-weight:900;
+      letter-spacing:4px;
+      color:#555;
+      margin-bottom:16px;
+    }
+
+    .badge{
+      display:inline-block;
+      padding:7px 16px;
+      border-radius:999px;
+      background:#111;
+      color:#fff;
+      font-size:12px;
+      font-weight:800;
+      margin-bottom:15px;
+    }
+
+    h1{
+      font-size:clamp(28px,6vw,48px);
+      line-height:1.25;
+      font-weight:900;
+      margin-bottom:12px;
+    }
+
+    h1 span{color:var(--red)}
+
+    .subtitle{
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.9;
+      max-width:650px;
+      margin:auto;
+    }
+
+    .products{
+      width:min(1080px,94%);
+      margin:10px auto 30px;
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:22px;
+    }
+
+    .card{
+      background:rgba(255,255,255,.96);
+      border:1px solid var(--line);
+      border-radius:24px;
+      overflow:hidden;
+      box-shadow:0 12px 35px rgba(0,0,0,.08);
+      position:relative;
+      transition:transform .2s ease,box-shadow .2s ease;
+    }
+
+    .card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 18px 45px rgba(0,0,0,.12);
+    }
+
+    .photo{
+      position:relative;
+      background:#f4f1eb;
+      aspect-ratio:1/1;
+      overflow:hidden;
+    }
+
+    .photo img{
+      width:100%;
+      height:100%;
+      display:block;
+      object-fit:cover;
+    }
+
+    .model{
+      position:absolute;
+      top:14px;
+      right:14px;
+      background:rgba(17,17,17,.92);
+      color:#fff;
+      padding:7px 12px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:800;
+    }
+
+    .content{
+      padding:20px 20px 22px;
+      text-align:center;
+    }
+
+    .content h2{
+      font-size:22px;
+      font-weight:900;
+      margin-bottom:5px;
+    }
+
+    .tagline{
+      color:#777;
+      font-size:13px;
+      margin-bottom:13px;
+    }
+
+    .features{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:7px;
+      margin-bottom:17px;
+    }
+
+    .feature{
+      background:#f5f5f5;
+      border:1px solid #ededed;
+      border-radius:999px;
+      padding:5px 9px;
+      font-size:11px;
+      font-weight:700;
+      color:#555;
+    }
+
+    .price{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      margin-bottom:16px;
+    }
+
+    .old{
+      color:#999;
+      text-decoration:line-through;
+      font-size:14px;
+      font-weight:600;
+    }
+
+    .new{
+      color:var(--red);
+      font-size:25px;
+      font-weight:900;
+    }
+
+    .cta{
+      display:block;
+      width:100%;
+      text-decoration:none;
+      color:#fff;
+      background:#111;
+      padding:16px 20px;
+      border-radius:15px;
+      font-size:16px;
+      font-weight:900;
+      transition:background .2s ease,transform .2s ease;
+    }
+
+    .cta:hover{background:#292929}
+    .cta:active{transform:scale(.98)}
+
+    .trust{
+      width:min(850px,92%);
+      margin:30px auto;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+    }
+
+    .trust-box{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:14px 8px;
+      text-align:center;
+      box-shadow:0 6px 20px rgba(0,0,0,.04);
+    }
+
+    .trust-box strong{
+      display:block;
+      font-size:13px;
+      margin-bottom:3px;
+    }
+
+    .trust-box small{
+      color:#777;
+      font-size:10px;
+    }
+
+    .note{
+      width:min(700px,90%);
+      margin:0 auto 24px;
+      text-align:center;
+      color:#777;
+      font-size:12px;
+      line-height:1.8;
+    }
+
+    footer{
+      text-align:center;
+      padding:28px 15px;
+      color:#888;
+      font-size:11px;
+    }
+
+    .sticky{
+      position:fixed;
+      left:0;
+      right:0;
+      bottom:0;
+      z-index:50;
+      padding:10px 14px;
+      background:rgba(255,255,255,.95);
+      border-top:1px solid #ddd;
+      backdrop-filter:blur(10px);
+    }
+
+    .sticky-inner{
+      width:min(700px,100%);
+      margin:auto;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:9px;
+    }
+
+    .sticky a{
+      text-align:center;
+      text-decoration:none;
+      color:#fff;
+      background:#111;
+      border-radius:12px;
+      padding:12px 8px;
+      font-size:12px;
+      font-weight:900;
+    }
+
+    .sticky a:last-child{background:var(--red)}
+
+    @media(max-width:700px){
+      .products{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:9px;
+        width:96%;
+      }
+      .card:hover{transform:none}
+      .trust{grid-template-columns:1fr 1fr 1fr}
+      header{padding-top:28px;padding-bottom:18px}
+      h1{font-size:27px}
+      .subtitle{font-size:12px;line-height:1.75}
+      .brand{font-size:12px;letter-spacing:3px}
+      .badge{font-size:10px;padding:6px 11px}
+      .content{padding:13px 9px 14px}
+      .content h2{font-size:16px}
+      .tagline{font-size:10px;line-height:1.55;min-height:32px}
+      .features{gap:4px;margin-bottom:11px}
+      .feature{font-size:8px;padding:4px 5px}
+      .price{gap:5px;margin-bottom:11px;flex-direction:column}
+      .new{font-size:19px;line-height:1}
+      .old{font-size:10px}
+      .cta{font-size:11px;padding:11px 6px;border-radius:11px}
+      .model{top:8px;right:8px;font-size:8px;padding:5px 7px}
+    }
+
+    @media(max-width:420px){
+      .trust-box{padding:12px 4px}
+      .trust-box strong{font-size:11px}
+      .trust-box small{font-size:9px}
+      .content{padding:17px 14px 19px}
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    🚚 التوصيل متوفر داخل الجزائر &nbsp; | &nbsp; <span>الدفع عند الاستلام</span>
+  </div>
+
+  <header>
+    <div class="brand">CURREN</div>
+    <div class="badge">⌚ اختر الموديل المناسب لك</div>
+    <h1>اختار ساعتك من <span>CURREN</span></h1>
+    <p class="subtitle">
+      اكتشف ساعات <strong style="color:#111">CURREN الأصلية</strong> بتصميمين مختلفين وأناقة تناسب ذوقك.
+      شوف التفاصيل، قارن بين الموديلين واختر الساعة التي تناسبك، ثم انتقل مباشرة إلى صفحة الطلب لإكمال الشراء.
+    </p>
+  </header>
+
+  <div style="width:min(720px,92%);margin:0 auto 22px;text-align:center;color:#555;font-size:12px;font-weight:700;">
+    ✦ ساعات CURREN أصلية &nbsp; • &nbsp; شوف الموديلين وقارن بينهما &nbsp; • &nbsp; أكمل طلبك بسهولة
+  </div>
+
+  <main class="products" id="models">
+
+    <!-- CURREN 8402 -->
+    <article class="card">
+      <div class="photo">
+        <img src="sac8.jpg" alt="ساعة CURREN 8402">
+        <div class="model">CURREN 8402</div>
+      </div>
+
+      <div class="content">
+        <h2>CURREN 8402</h2>
+        <p class="tagline">تصميم أنيق وعصري للاستعمال اليومي</p>
+
+        <div class="features">
+          <span class="feature">⌚ تصميم أنيق</span>
+          <span class="feature">💧 مقاومة للماء</span>
+          <span class="feature">⚙️ كرونوغراف</span>
+        </div>
+
+        <div class="price">
+          <span class="new">5900 دج</span>
+          <span class="old">8200 دج</span>
+        </div>
+
+        <a class="cta"
+           href="https://accmarket.xyz/curren8402"
+           onclick="trackProduct('CURREN-8402',5900)">
+          اكتشف CURREN 8402
+        </a>
+      </div>
+    </article>
+
+    <!-- CURREN 8488 -->
+    <article class="card">
+      <div class="photo">
+        <img src="cur2.jpeg" alt="ساعة CURREN 8488">
+        <div class="model">CURREN 8488</div>
+      </div>
+
+      <div class="content">
+        <h2>CURREN 8488</h2>
+        <p class="tagline">تصميم قوي وفخم بإطلالة مميزة</p>
+
+        <div class="features">
+          <span class="feature">⌚ تصميم فاخر</span>
+          <span class="feature">💧 مقاومة للماء</span>
+          <span class="feature">⚙️ كرونوغراف</span>
+        </div>
+
+        <div class="price">
+          <span class="new">6900 دج</span>
+          <span class="old">9200 دج</span>
+        </div>
+
+        <a class="cta"
+           href="https://accmarket.xyz/curren8488"
+           onclick="trackProduct('CURREN-8488',6900)">
+          اكتشف CURREN 8488
+        </a>
+      </div>
+    </article>
+
+  </main>
+
+  <section class="trust">
+    <div class="trust-box">
+      <strong>🚚 توصيل للجزائر</strong>
+      <small>إلى مختلف الولايات</small>
+    </div>
+    <div class="trust-box">
+      <strong>💵 الدفع عند الاستلام</strong>
+      <small>ادفع عند استلام طلبك</small>
+    </div>
+    <div class="trust-box">
+      <strong>📞 تأكيد الطلب</strong>
+      <small>نتواصل معك لتأكيده</small>
+    </div>
+  </section>
+
+  <p class="note">
+    اختر الموديل الذي أعجبك، واضغط على زر الاكتشاف للانتقال إلى صفحته الخاصة وإكمال الطلب.
+  </p>
+
+  <footer>
+    © CURREN — AccMarket
+  </footer>
+
+  <div class="sticky">
+    <div class="sticky-inner">
+      <a href="#models">
+        ✨ شوف الموديلين
+      </a>
+      <a href="#models">
+        🛍️ اختر ساعتك الآن
+      </a>
+    </div>
+  </div>
+
+  <script>
+    function trackProduct(productRef, price){
+      if(typeof fbq !== 'undefined'){
+        fbq('track','ViewContent',{
+          content_name: productRef,
+          content_category: 'Watches',
+          content_ids: [productRef]
+        });
+      }
+    }
+  </script>
+
+</body>
+</html>
