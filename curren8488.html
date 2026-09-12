@@ -300,7 +300,7 @@ footer strong{color:var(--accent)}
 <header class="header-luxury">
   <span class="badge-original">⚡ ساعة CURREN 8488 — أصلية 100%</span>
   <h1>ساعة CURREN 8488 الأصلية</h1>
-  <p class="header-tagline">تصميم فاخر يناسب كل المناسبات — مقاومة للماء وكرونومتر يعمل بدقة</p>
+  <p class="header-tagline">تصميم مستطيل وفخم يناسب كل المناسبات — مقاومة للماء وكرونوغراف بتفاصيل أنيقة</p>
   <div class="size-under-title">
     <span class="size-chip">✅ أصلية 100%</span>
     <span class="size-chip">💧 مقاومة للماء</span>
@@ -312,7 +312,7 @@ footer strong{color:var(--accent)}
     <div class="discount-tag">وفّر 2700 دج</div>
   </div>
 </header>
-<div class="product-use">ساعة رجالية فاخرة بتصميم كرونوغراف أنيق — تناسب العمل، المناسبات، والاستعمال اليومي 🕰️</div>
+<div class="product-use">ساعة رجالية فاخرة بتصميم مستطيل وكرونوغراف أنيق — تناسب العمل، المناسبات، والاستعمال اليومي 🕰️</div>
 
 <div class="slider-wrap">
 
@@ -320,8 +320,10 @@ footer strong{color:var(--accent)}
     <img src="cur1.jpeg" alt="ساعة CURREN 8488 الأصلية - 1">
     <img src="cur2.jpeg" alt="ساعة CURREN 8488 الأصلية - 2">
     <img src="cur3.jpeg" alt="ساعة CURREN 8488 الأصلية - 3">
-    <img src="cur6.jpeg" alt="ساعة CURREN 8488 الأصلية - 4">
+    <img src="cur6.jpeg"  alt="ساعة CURREN 8488 الأصلية - 4">
     <img src="cur7.jpeg" alt="ساعة CURREN 8488 الأصلية - 5">
+    <img src="cur4.jpeg" alt="ساعة CURREN 8488 الأصلية - 6">
+    <img src="cur5.jpeg"  alt="ساعة CURREN 8488 الأصلية - 7">
   </div>
 
   <div class="product-thumbs" id="productThumbs">
@@ -351,12 +353,23 @@ footer strong{color:var(--accent)}
          class="product-thumb"
          data-index="4">
 
+    <img src="cur4.jpeg"
+         alt="ساعة CURREN 8488 الأصلية 6"
+         class="product-thumb"
+         data-index="5">
+
+    <img src="cur5.jpeg"
+         alt="ساعة CURREN 8488 الأصلية 7"
+         class="product-thumb"
+         data-index="6">
+
   </div>
 
   <div class="slider-arrow prev" onclick="moveSlide(1)">‹</div>
   <div class="slider-arrow next" onclick="moveSlide(-1)">›</div>
   <div class="slider-dots" id="sliderDots"></div>
 
+</div>
 </div>
 
 <div class="order-card" id="orderForm">
@@ -412,8 +425,8 @@ footer strong{color:var(--accent)}
 </div>
 
 <div class="detail-shots">
-  <img src="cur4.jpeg" alt="ساعة CURREN 8488 - الألوان المتوفرة">
-  <img src="cur5.jpeg" alt="ساعة CURREN 8488 - مواصفات الساعة">
+  <img src="sa1.webp" alt="ساعة CURREN 8488 - الألوان المتوفرة">
+  <img src="sa3.jpg" alt="ساعة CURREN 8488 - مواصفات الساعة">
 </div>
 
 <section class="section">
@@ -576,7 +589,7 @@ async function submitToMake() {
   const address_detail = document.getElementById('address_full').value.trim();
 
   if(!name || !phone ||  !wilaya) {
-    alert("الرجاء إكمال الاسم والهاتف واللون والولاية");
+    alert("الرجاء إكمال الاسم والهاتف والولاية والبلدية");
     return;
   }
   if(!/^0[5-7][0-9]{8}$/.test(phone)) {
@@ -725,6 +738,9 @@ refreshTotal();
   </div>
 </section>
 
+
+
+
 <style>
 .bottom-cta{max-width:1050px;margin:18px auto 25px;padding:0 16px}
 .bottom-cta .btn-order{display:block;width:100%;padding:13px;border:0;border-radius:12px;cursor:pointer;font-size:16px;font-weight:900}
@@ -732,17 +748,18 @@ refreshTotal();
   
 <!-- مشتريات أخرى -->
 <section class="other-products">
+  
   <h2>🛍️ مشتريات أخرى</h2>
 
   <div class="other-product-card">
-    <img src="sa8.jpg" alt="CURREN 8402">
+    <img src="cur2.jpeg" alt="CURREN 8488">
 
-    <h3>CURREN 8402</h3>
+    <h3>CURREN 8488</h3>
 
-    <p class="old-price">8200 دج</p>
-    <p class="new-price">5900 دج</p>
+    <p class="old-price">9200 دج</p>
+    <p class="new-price">6500 دج</p>
 
-   <a href="https://accmarket.xyz/curren8402" class="other-order-btn">
+  <a href="https://accmarket.xyz/curren8488" class="other-order-btn">
   اشتري الآن
 </a>
   </div>
@@ -803,10 +820,9 @@ refreshTotal();
   font-weight: bold;
 }
 </style>
-  
+
   <div class="bottom-cta">
   <button type="button" class="btn-order" onclick="document.getElementById('orderForm')?.scrollIntoView({behavior:'smooth'})">اطلب الآن</button>
 </div>
-  
 </body>
 </html>
